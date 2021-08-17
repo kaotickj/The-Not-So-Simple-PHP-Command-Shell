@@ -1,7 +1,7 @@
 <h1> The Not-So Simple PHP Command Shell</h1>
 <img src="/img/nsscmdshell.png" />
 <p>Automates many on target functions. Designed for windows targets. It isn't pretty, but it works as intended. Note that the tools in my quick upload function are not included in this repo as they are the work of other parties. Sources for quick upload files follow: <br>
-Invoke-WScriptBypassUAC.ps1: https://github.com/EmpireProject/Empire/blob/master/data/module_source/privesc/Invoke-WScriptBypassUAC.ps1
+Invoke-WScriptBypassUAC.ps1: https://github.com/EmpireProject/Empire/blob/master/data/module_source/privesc/Invoke-WScriptBypassUAC.ps1<br>
 PsTools: https://download.sysinternals.com/files/PSTools.zip <br>
 CVE-2015-1701 Priv Esc(aka Taihou.exe) https://github.com/hfiref0x/CVE-2015-1701<br>
 JAWs Enum: https://github.com/411Hall/JAWS/blob/master/jaws-enum.ps1<br>
