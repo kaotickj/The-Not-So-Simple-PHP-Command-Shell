@@ -18,20 +18,21 @@
 		<form action="" method="get">
 		<select name="upload">
 		<option>Choose</option>
-		<option value="Invoke-WScriptBypassUAC.ps1">WScriptBypassUAC (Win7)</option>
-		<option value="jaws-enum.ps1">JAWs Enum</option>
-		<option value="ms15-05164.exe">MS15-051 Priv Esc</option>
-		<option value="nc.exe">Netcat 32</option>
-		<option value="nc64.exe">Netcat 64</option>
+		<option value="Invoke-WScriptBypassUAC.ps1" title="bypasses uac to execute vbscript code with elevated privileges.  you need to edit the code to make it usable">WScriptBypassUAC (Win7)</option>
+		<option value="jaws-enum.ps1" title="Just Another Windows Enumeration Script - aka just the best windows enum script">JAWs Enum</option>
+		<option value="ms15-05164.exe" title="x64 only">MS15-051 Priv Esc</option>
+		<option value="nc.exe" title="netcat for windows x86 version">Netcat 32</option>
+		<option value="nc64.exe" title="netcat for win x64">Netcat 64</option>
 		<option value="PsExec.exe">PsExec</option>
 		<option value="PsInfo.exe">PsInfo</option>
 		<option value="pspasswd.exe">PsPasswd</option>
 		<option value="PowerUp.ps1">PowerUp.ps1</option>
-		<option value="Taihou64.exe">Taihou 15-1701 PrivEsc</option>
-		<option value="venom.exe">VENOM.EXE</option>
-		<option value="wce32.exe">WCE 32</option>
-		<option value="wce64.exe">WCE 64</option>
-		<option value="wce-universal.exe">WCE Universal</option>
+		<option value="Taihou32.exe" title="ms15-051~15-1701 Windows Kernel Mode Drivers local Priv Esc for x86">Taihou32 15-1701 PrivEsc</option>
+		<option value="Taihou64.exe" title="ms15-051~15-1701 Windows Kernel Mode Drivers local Priv Esc for x64">Taihou64 15-1701 PrivEsc </option>
+		<option value="venom.exe" title="msfvenom windows/meterpreter/reverse_tcp shell exe">VENOM.EXE</option>
+		<option value="wce32.exe" title="windows credential editor x86">WCE 32</option>
+		<option value="wce64.exe" title="windows credential editor x64">WCE 64</option>
+		<option value="wce-universal.exe" title="windows credential editor that only seems to work with xp">WCE Universal</option>
 		</select><button type="submit">Upload</button>
 		</form>
 		<p><or enter filename></p>
