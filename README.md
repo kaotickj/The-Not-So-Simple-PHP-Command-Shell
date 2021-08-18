@@ -45,6 +45,7 @@ It goes without saying that the effectiveness of the various functions depends o
  <li> You didn't set the variables, <code>$attackip</code> and <code>$attackport</code> to your machine. Fix: ifconfig your ip, and set in nsscmdshell.php lines 10 and 11.</li> 
  <li> The files are not available on the defined server or port, or there is no server running on the defined port. Fix: <code>python3 -m http.server XXXX</code> in a directory containing the files you're attempting to upload.</li>
  </ol>
+<h3>Footnotes:</h3> 
 <p><sub>1</sub> I generally cd into my "windowstools" folder and start a simple http server:<br>
 <code>cd windowstools</code><br>
 <code>python3 -m http.server 8000</code>.<br>
