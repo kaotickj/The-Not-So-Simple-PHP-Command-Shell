@@ -50,4 +50,4 @@ It goes without saying that the effectiveness of the various functions depends o
  <li> You didn't set the variables, <code>$attackip</code> and <code>$attackport</code> to your machine. Fix: ifconfig your ip, and set in nsscmdshell.php lines 10 and 11.</li> 
  <li> The files are not available on the defined server or port, or there is no server running on the defined port. Fix: <code>python3 -m http.server XXXX</code> in a directory containing the files you're attempting to upload.</li>
  </ol>
-<script src="https://www.hackthebox.eu/badge/476578"></script>
+<div style="margin:0px auto;text-align:center;"><img src="http://www.hackthebox.eu/badge/image/476578" alt="Hack The Box"></div>
