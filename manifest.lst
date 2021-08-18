@@ -1,0 +1,6 @@
+Invoke-WScriptBypassUAC.ps1: https://github.com/EmpireProject/Empire/blob/master/data/module_source/privesc/Invoke-WScriptBypassUAC.ps1
+PsTools: https://download.sysinternals.com/files/PSTools.zip
+CVE-2015-1701 Priv Esc(aka Taihou.exe) https://github.com/hfiref0x/CVE-2015-1701
+JAWs Enum: https://github.com/411Hall/JAWS/blob/master/jaws-enum.ps1
+Netcat for windows: https://github.com/int0x33/nc.exe
+Windows Credentials Editor (wce32,64, and universal): https://gitlab.com/kalilinux/packages/wce
