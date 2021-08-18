@@ -23,9 +23,6 @@
 		<option value="ms15-05164.exe" title="x64 only">MS15-051 Priv Esc</option>
 		<option value="nc.exe" title="netcat for windows x86 version">Netcat 32</option>
 		<option value="nc64.exe" title="netcat for win x64">Netcat 64</option>
-		<option value="PsExec.exe">PsExec</option>
-		<option value="PsInfo.exe">PsInfo</option>
-		<option value="pspasswd.exe">PsPasswd</option>
 		<option value="PowerUp.ps1">PowerUp.ps1</option>
 		<option value="Taihou32.exe" title="ms15-051~15-1701 Windows Kernel Mode Drivers local Priv Esc for x86">Taihou32 15-1701 PrivEsc</option>
 		<option value="Taihou64.exe" title="ms15-051~15-1701 Windows Kernel Mode Drivers local Priv Esc for x64">Taihou64 15-1701 PrivEsc </option>
