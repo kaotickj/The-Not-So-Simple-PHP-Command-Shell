@@ -49,5 +49,6 @@ It goes without saying that the effectiveness of the various functions depends o
 <p><sub>1</sub> I generally cd into my "windowstools" folder and start a simple http server:<br>
 <code>cd windowstools</code><br>
 <code>python3 -m http.server 8000</code>.<br>
+<br>
 <img src="https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-listening.png" /></p>
 <p><a href="https://www.hackthebox.eu/home/users/profile/476578" target="_blank"><img src="http://www.hackthebox.eu/badge/image/476578" alt="KaotickJ at Hack The Box" /></a></p>
