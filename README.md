@@ -38,10 +38,6 @@ Example usage: run jaws-enum.ps1 - output to jaws.txt <code>powershell.exe -Exec
 <img src="https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-title-desc.png" /><br>
 
 It goes without saying that the effectiveness of the various functions depends on the target os's support of the functions and the current user's permissions. This was designed for and tested on Windows XP - Windows 8.1 with very limited testing on Win10.</p> 
-<code>cd windowstools</code><br>
-<code>python3 -m http.server 8000</code>.<br>
-
-<img src="https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-listening.png" />
 
 *** Got "Warning: file_get_contents(http://XX.XX.XX.XX:XXXX/filename.ext):failed to open stream: No connetion could be made...." error? 
  Two possible causes:</p>
@@ -49,7 +45,8 @@ It goes without saying that the effectiveness of the various functions depends o
  <li> You didn't set the variables, <code>$attackip</code> and <code>$attackport</code> to your machine. Fix: ifconfig your ip, and set in nsscmdshell.php lines 10 and 11.</li> 
  <li> The files are not available on the defined server or port, or there is no server running on the defined port. Fix: <code>python3 -m http.server XXXX</code> in a directory containing the files you're attempting to upload.</li>
  </ol>
-<h3>Footnotes</h3> 
-<sub>1</sub> I generally cd into my "windowstools" folder and start a simple http server:<br>
-
+<p><sub>1</sub> I generally cd into my "windowstools" folder and start a simple http server:<br>
+<code>cd windowstools</code><br>
+<code>python3 -m http.server 8000</code>.<br>
+<img src="https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-listening.png" /></p>
 <p><a href="https://www.hackthebox.eu/home/users/profile/476578" target="_blank"><img src="http://www.hackthebox.eu/badge/image/476578" alt="KaotickJ at Hack The Box" /></a></p>
