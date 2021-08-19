@@ -60,5 +60,5 @@ It goes without saying that the effectiveness of the various functions depends o
 <code>python3 -m http.server 8000</code>.<br>
 <br>
 <img src="https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-listening.png" /></p>
-<script src="https://www.hackthebox.eu/badge/476578"></script>
-<noscript><img src="http://www.hackthebox.eu/badge/image/476578" alt="Hack The Box"></noscript>
+
+<img src="http://www.hackthebox.eu/badge/image/476578" alt="Hack The Box">
