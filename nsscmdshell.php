@@ -20,8 +20,8 @@
         <option>Choose</option>
         <option value="Invoke-WScriptBypassUAC.ps1" title="bypasses uac to execute vbscript code with elevated privileges.  you need to edit the code to make it usable">WScriptBypassUAC (Win7)</option>
         <option value="jaws-enum.ps1" title="Just Another Windows Enumeration Script - aka just the best windows enum script">JAWs Enum</option>
-        <option value="ms15-05132.exe" title="x86 only">MS15-051 Priv Esc</option>
-        <option value="ms15-05164.exe" title="x64 only">MS15-051 Priv Esc</option>
+        <option value="ms15-05132.exe" title="x86 only">MS15-051 x86 Priv Esc</option>
+        <option value="ms15-05164.exe" title="x64 only">MS15-051 x64 Priv Esc</option>
         <option value="nc.exe" title="netcat for windows x86 version">Netcat 32</option>
         <option value="nc64.exe" title="netcat for win x64">Netcat 64</option>
         <option value="PowerUp.ps1">PowerUp.ps1</option>
