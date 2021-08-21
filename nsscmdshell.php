@@ -115,10 +115,10 @@
            echo '<div style="position:absolute;float:right;top:5%;right:5%;text-align:left;">
             <p>Quick Links:</p>
             <a href="https://stationx-public-download.s3.us-west-2.amazonaws.com/nmap_cheet_sheet_v7.pdf" target="_blank">Nmap Cheat Sheet</a><br>
-            <a href="https://www.exploit-db.com/" target="_blank">ExploitDB</a><br>
             <a href="https://github.com/frizb/MSF-Venom-Cheatsheet" target="_blank">Msfvenom Cheat Sheet</a><br>
-            <a href="https://cxsecurity.com/exploit/" target="_blank" target="_blank">CX Security Vulnerability Database</a><br>
             <a href="https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet" target="_blank">Reverse Shell Cheat Sheet</a><br>
+            <a href="https://www.exploit-db.com/" target="_blank">ExploitDB</a><br>
+            <a href="https://cxsecurity.com/exploit/" target="_blank" target="_blank">CX Security Vulnerability Database</a><br>
             <a href="https://int0x33.medium.com/day-76-use-nishang-empire-and-other-ps1-scripts-manually-332b4604e2a7" target="_blank">Nishang Usage</a><br>
             <a href="https://int0x33.medium.com/day-63-top-10-essential-nmap-scripts-for-web-app-hacking-c7829ff5ab7" target="_blank">Essential Nmap Scripts</a><br>
             <a href="https://int0x33.medium.com/day-26-the-complete-list-of-windows-post-exploitation-commands-no-powershell-999b5433b61e" target="_blank">Windows Post-Exploitation Commands</a>';
