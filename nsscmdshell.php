@@ -51,7 +51,7 @@
         </select><button type="submit">Upload</button>
         </form>
         <p>&nbsp;</p>
-        <form action="" method="post" enctype="multipart/form-data"><input name="upload" type="file" placeholder="File to Upload"/><button type="submit">Upload</button></form><br>
+        <form action="" method="get" enctype="multipart/form-data"><input name="upload" type="file" placeholder="File to Upload"/><button type="submit">Upload</button></form><br>
         <form action="" method="get"><input type="text" name="download" placeholder="File to Download"/><button type="submit" title="downloads file to attack machine">Download</button></form>
         <form action="" method="get">
         <p>Quick Enum Options</p>
