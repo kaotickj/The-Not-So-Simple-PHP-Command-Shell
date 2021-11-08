@@ -121,6 +121,8 @@
             <a href="https://int0x33.medium.com/day-76-use-nishang-empire-and-other-ps1-scripts-manually-332b4604e2a7" target="_blank">Nishang Usage</a><br>
             <a href="https://int0x33.medium.com/day-26-the-complete-list-of-windows-post-exploitation-commands-no-powershell-999b5433b61e" target="_blank">Windows Post-Exploitation Commands</a>';
             }
+//FUNCTIONS
+
 ?>
     </body>
 </html>
