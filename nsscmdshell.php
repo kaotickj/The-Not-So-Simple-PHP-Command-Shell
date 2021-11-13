@@ -147,12 +147,13 @@ $attackport = "8000";
 if (is_get_request()){
     if (isset($_GET['clean'])) {
         $cleans = $_SESSION['actions'];
+        $alerts = "";
         foreach($cleans as $clean) {
             if (!unlink ($clean)){
                 die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>$clean can\'t be deleted.</p>');
             }
             else {
-                echo '<div style="width:50%;margin:20px 40px;padding:20px 30px;color:#fff;background-color:green;font-size:1.2em;">Deleted: '. $clean .'<br>';
+            $alerts .= 'Deleted: '. $clean .'<br>';
             }
         }
             if ($_SESSION){
@@ -161,7 +162,11 @@ if (is_get_request()){
                 ob_start();
                 ob_clean();
                 sleep(1);
-                if ($_SESSION['actions'] == NULL) echo '<p>Cleanup completed successfully.</p></div>';
+                if ($_SESSION['actions'] == NULL) {
+                   ?>
+                   <div style="width:50%;margin:20px 40px;padding:20px 30px;color:#fff;background-color:green;font-size:1.2em;"><p><?php echo $alerts; ?>Cleanup completed successfully.</p></div>
+<?php
+                }
             } else {
                 die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>Nothing to do!</p></div>');
             }
