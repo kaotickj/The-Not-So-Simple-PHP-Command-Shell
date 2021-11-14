@@ -17,6 +17,7 @@ $attackport = "8000";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>The Not-So Simple Command Shell by KaotickJ</title>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     </head>
     <body>
 <?php
@@ -184,7 +185,22 @@ if (isset($_GET['phpInfo'])) {
                 sleep(1);
                 if ($_SESSION['actions'] == NULL) {
                    ?>
-                   <div style="width:50%;margin:20px 40px;padding:20px 30px;color:#fff;background-color:green;font-size:1.2em;"><p>Deleted: </p><?php echo $alerts; ?><p>Cleanup completed successfully.</p><form action="" method="get">Do you also want to delete nsscmdshell.php? <br><button name="kill_me">Delete nsccmdshell.php </button></form></div>
+    <script type="text/javascript">
+        $(function () {
+            $("#btnSubmit").click(function () {
+                var result = confirm("Are you sure? This will REALLY delete this file!");
+
+                if (result == true) {
+                    return true;
+                }
+
+                else {
+                    return false;
+                }
+            });
+        });
+    </script>
+                   <div style="width:50%;margin:20px 40px;padding:20px 30px;color:#fff;background-color:green;font-size:1.2em;"><p>Deleted: </p><?php echo $alerts; ?><p>Cleanup completed successfully.</p><p>Do you also want to delete nsscmdshell.php?</p> <form action="" method="get"><br><button id="btnSubmit" name="kill_me">Delete nsccmdshell.php </button></form></div>
 <?php
                 }
             } else {
