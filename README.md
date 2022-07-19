@@ -54,7 +54,7 @@ The quick command buttons each have a title attribute with a brief description o
 
 It goes without saying that the effectiveness of the various functions depends on the target os's support of the functions and the current user's permissions. This was designed for and tested on Windows XP - Windows 8.1 with very limited testing on Win10.
 
-*** Got "Warning: file_get_contents(http://XX.XX.XX.XX:XXXX/filename.ext):failed to open stream: No connetion could be made...." error?
+*** Got "Warning: file_get_contents(http://XX.XX.XX.XX:XXXX/filename.ext):failed to open stream: No connection could be made...." error?
  Two possible causes:
 1. You didn't set the variables, `$attackip` and `$attackport` to your machine. Fix: ifconfig your ip, and set in nsscmdshell.php lines 10 and 11.
 2. The files are not available on the defined server or port, or there is no server running on the defined port. Fix: `python3 -m http.server XXXX` in a directory containing the files you're attempting to upload.
