@@ -36,9 +36,9 @@ Once the nsscmdshell is uploaded, typing valid commands into the command input o
 
 ![](https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-output.png)
 
-###### The upload and download options are self explanatory, but just to avoid any confusion:
+#### * The upload and download options are self explanatory, but just to avoid any confusion:
 
-If using the select field, choose your file and click "upload". Files linked in the select field options need to be present at the web root at the ip address and port in lines 10 and 11 of nsscmdshell.php.^1^
+If using the select field, choose your file and click "upload". Files linked in the select field options need to be present at the web root at the ip address and port in lines 10 and 11 of nsscmdshell.php.<sup>1</sup>
 
 If using the open file dialog option, only files present at the ip address and port specified can be uploaded.
 
@@ -60,7 +60,7 @@ It goes without saying that the effectiveness of the various functions depends o
 2. The files are not available on the defined server or port, or there is no server running on the defined port. Fix: `python3 -m http.server XXXX` in a directory containing the files you're attempting to upload.
 
 ### Footnotes:
-^1^ I generally cd into my "windowstools" folder and start a simple http server:
+<sup>1</sup> I generally cd into my "windowstools" folder and start a simple http server:
 `cd windowstools`
 `python3 -m http.server 8000`.
 ![](https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-listening.png)
