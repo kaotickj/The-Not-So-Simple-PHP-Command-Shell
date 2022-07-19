@@ -63,5 +63,6 @@ It goes without saying that the effectiveness of the various functions depends o
 <sup>1</sup> I generally cd into my "windowstools" folder and start a simple http server:
 `cd windowstools`
 `python3 -m http.server 8000`.
+
 ![](https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-listening.png)
 ![Hack The Box](http://www.hackthebox.eu/badge/image/476578)
