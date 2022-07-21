@@ -235,7 +235,7 @@ if (is_get_request()){
             });
         });
     </script>
-                   <div style="width:50%;margin:20px 40px;padding:20px 30px;color:#fff;background-color:green;font-size:1.2em;"><p>Deleted: </p><?php echo $alerts; ?><p>Cleanup completed successfully.</p><p>Do you also want to delete nsscmdshell.php?</p> <form action="" method="get"><br><button id="btnSubmit" name="kill_me">Delete nsccmdshell.php </button> <a role="button" href="?clear=true" class="btn"><button>Keep nsscmdshell.php</button></a></form></div>
+                   <div style="width:50%;margin:20px 40px;padding:20px 30px;color:#fff;background-color:green;font-size:1.2em;"><p>Deleted: </p><?php echo $alerts; ?><p>Cleanup completed successfully.</p><p>Do you also want to delete nsscmdshell.php?</p> <form action="" method="get"><br><button class="btn btn-danger" id="btnSubmit" name="kill_me">Delete nsccmdshell.php </button> <a role="button" href="?clear=true" class="btn"><button class="btn btn-warning">Keep nsscmdshell.php</button></a></form></div>
 <?php
                 }
             } else {
