@@ -27,6 +27,7 @@ $attackport = "8000";
 			background: #190565;
 			border:1px solid #333;
 			width:55%;
+			padding:20px 30px;
 			margin:10px 40px;
 			color:#fff;
 		}
