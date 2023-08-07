@@ -1,4 +1,4 @@
-[![Actively Maintained](https://img.shields.io/badge/Maintenance%20Level-Actively%20Maintained-green.svg)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d) [![Version-2.0.8](https://img.shields.io/badge/Version-2.0.8-green)](https://img.shields.io/badge/Version-2.0.8-green) [![License MIT](https://img.shields.io/badge/License-MIT-blue)](https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/LICENSE) [![Language PHP](https://img.shields.io/badge/Language-PHP-red)](https://www.php.net/)
+[![Actively Maintained](https://img.shields.io/badge/Maintenance%20Level-Actively%20Maintained-green.svg)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d) [![Version-2.0.8](https://img.shields.io/badge/Version-2.0.8-green)](https://img.shields.io/badge/Version-2.0.8-green) [![License GNU/GPL2.0](https://img.shields.io/badge/License-GNU/GPL2.0-blue)](https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/LICENSE) [![Language PHP](https://img.shields.io/badge/Language-PHP-red)](https://www.php.net/)
 
 # The Not-So Simple PHP Command Shell 🕵🔎 ️
 ![Logo](/img/nsscmdshell.png)
