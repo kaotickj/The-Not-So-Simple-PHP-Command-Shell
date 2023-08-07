@@ -75,4 +75,4 @@ cd windowstools
 python3 -m http.server 8000
 ```
 ![Screen](https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/img/nsscmdshell-listening.png)
-![Hack The Box](http://www.hackthebox.eu/badge/image/476578)  ![Try Hack Me Box](https://tryhackme-badges.s3.amazonaws.com/kaotickj.pn)
+![Hack The Box](http://www.hackthebox.eu/badge/image/476578)  ![Try Hack Me](https://tryhackme-badges.s3.amazonaws.com/kaotickj.png)
