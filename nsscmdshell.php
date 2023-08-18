@@ -194,7 +194,10 @@ if (is_get_request()){
     }
 
     if (isset($_GET['clean'])) {
-        $cleans = $_SESSION['actions'];
+		if (session_status() === PHP_SESSION_NONE) {
+			session_start();
+		}
+		$cleans = $_SESSION['actions'];
         $alerts = "";
         foreach($cleans as $clean) {
             if (!unlink ($clean)){
