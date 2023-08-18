@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (!isset($_SESSION['actions'])) {
+    $_SESSION['actions'] = array();
+}
 function is_post_request() {
     return $_SERVER['REQUEST_METHOD'] == 'POST';
 }
@@ -8,7 +11,7 @@ function is_get_request() {
 }
 
 // Set these variables to YOUR attack box
-$attackip = "10.0.2.40";
+$attackip = "10.0.2.4";
 $attackport = "8000";
 ?>
 <!doctype html>
