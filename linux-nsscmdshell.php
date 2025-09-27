@@ -1,8 +1,4 @@
 <?php
-require_once 'initialize.php';
-is_ip_authorized();
-require_login();
-
 session_start();
 
 // Set attack box IP and port
