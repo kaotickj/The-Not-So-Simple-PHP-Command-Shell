@@ -2,6 +2,7 @@
 
 # The Not-So Simple PHP Command Shell 🕵🔎 ️
 ![Logo](/img/nsscmdshell.png)
+![Linux Version Screenshot](/img/linux-nsscmdshell.png)
 ## Foreword:
 > Please note that gaining access to the target is beyond the scope of this writing and your responsibility to establish in a manner consistent with established law.  This tool is intended to be used for on target enumeration to gather and exfiltrate information and then to upload and execute tools such as netcat or msvenom payload for further access to the target. The following websites provide training resources and practice scenarios and are excellent resources for learning such skills:
 
