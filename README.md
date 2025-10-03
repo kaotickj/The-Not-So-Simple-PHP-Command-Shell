@@ -1,7 +1,9 @@
 [![Actively Maintained](https://img.shields.io/badge/Maintenance%20Level-Actively%20Maintained-green.svg)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d) [![Version-2.0.8](https://img.shields.io/badge/Version-2.0.8-green)](https://img.shields.io/badge/Version-2.0.8-green) [![License GNU/GPL2.0](https://img.shields.io/badge/License-GNU/GPL2.0-blue)](https://github.com/kaotickj/The-Not-So-Simple-PHP-Command-Shell/blob/main/LICENSE) [![Language PHP](https://img.shields.io/badge/Language-PHP-red)](https://www.php.net/)
 
 # The Not-So Simple PHP Command Shell 🕵🔎 ️
-![Logo](/img/nsscmdshell.png)
+### Windows Version Screenshot
+![Windows Version Screenshot](/img/nsscmdshell.png)
+### Linux Version Screenshot
 ![Linux Version Screenshot](/img/linux-nsscmdshell.png)
 ## Foreword:
 > Please note that gaining access to the target is beyond the scope of this writing and your responsibility to establish in a manner consistent with established law.  This tool is intended to be used for on target enumeration to gather and exfiltrate information and then to upload and execute tools such as netcat or msvenom payload for further access to the target. The following websites provide training resources and practice scenarios and are excellent resources for learning such skills:
